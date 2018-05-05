@@ -1,0 +1,209 @@
+body {
+  background-image: url('https://s3.amazonaws.com/ocu/assets/img/gradient-wallpaper-1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;}
+.container-fluid {
+  padding: 0;}
+#main-content {
+  background: white;
+  position: relative;
+  font-size: 1.3em;
+  width: 100%;
+  max-width: 1024px;
+  padding-bottom: 30px;
+  margin: auto;}
+.main-text {
+  line-height:1.7; 
+  width:60%; 
+  margin:30px auto;}
+
+
+
+#header {
+  background: black;
+  position: relative;}
+#hoc {
+  opacity: 0;}
+#hoc, #hoc-text {
+  width: 100%;}
+#hoc-mobile {
+  display: none;}
+#hoc-text-mobile {
+  display: none;}
+svg, #hoc-text {
+  opacity: 0;
+  position: absolute;
+  top: 0; left: 0;}
+#hoc2-mobile {
+  display: none;}
+
+
+
+
+#actions {
+  font-size: 1.5em;
+  width: 80%;
+  clear: both;
+  margin: auto;
+  padding-top: 30px;}
+#ready {
+  background: #5EC1B3;
+  border: none;
+  font-weight: bold;
+  padding: 15px 30px;
+  width: 90%;
+  margin: 15px auto;
+  text-align: center;
+  text-decoration: underline;
+  display: block;}
+#visit {
+  background: none;
+  border: none;
+  padding: 15px 30px;
+  width: 90%;
+  margin: 15px auto;
+  text-align: center;
+  text-decoration: underline;
+  display: block;}
+#ready:hover, #visit:hover {
+  cursor: pointer;}
+
+.row.thing {
+  width: 80%;
+  margin: auto;}
+.item {
+  margin-top: 0%;}
+td {
+  text-align: center;}
+td.icons {
+  position: relative;
+  width: 30%;}
+.icons img {
+  width: 100%;
+  max-width: 240px;}
+.icon-clicked, .icon {
+  width: 100%;
+  position: absolute;
+  top: 0; left: 0;}
+td.desc {
+  text-align: left;}
+td.icons, td.desc {
+  padding: 6px 0;}
+.icons img:hover {
+  cursor: pointer;}
+.icon-clicked {
+  opacity: 0;}
+
+
+#footer {
+  background:#393738; 
+  color:white; 
+  padding:30px 0; 
+  font-weight:bold; 
+  margin-top:30px;}
+#footer .row {
+  margin: 0;}
+#footer-logo {
+  text-align: right;}
+.address-info {
+  padding-top: 15px;}
+.address-info div {
+  display:inline-block; 
+  text-align:left;}
+.address-info div:first-of-type {
+  border-right: solid 1px white;
+  padding-right: 30px;
+  margin-right: 30px;}
+
+
+.links {
+  width:60%;
+  margin: auto;}
+.links .col-xs-6 {
+  padding: 0 6px;}
+.link {
+  background: #5EC1B3;
+  margin:6px 0;
+  padding:15px 0;
+  text-align: center;}
+.links a {
+  color: black;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+
+#selections {
+  width: 60%;
+  margin: auto;
+  background: #E1F3F1;}
+#selections li {
+  padding: 6px;
+  font-style: italic;}
+
+
+
+@media screen and (max-width: 420px) {
+  body {
+    background-image: none;}
+  #hoc-mobile {
+    width: 100%;
+    display: block;}
+  #hoc {
+    display: none;}
+
+
+  .svg-object {
+    display: none;}
+  #hoc-text {
+    display: none;}  
+  #hoc-text-mobile {
+    position: absolute;
+    width: 90%;
+    top:0; left: 5%;
+    display: block;
+    opacity: 1;}
+  
+
+
+  #main-content {
+    width: 100%;
+    font-size: 1em;}
+  .main-text {
+    width: 90%;}
+
+  .row.thing {
+    width: 90%;}
+  td.icons {
+    width: 25%;}
+  td.desc {
+    padding-left: 6px;}
+  #actions {
+    width: 100%;}
+  .address-info {
+    text-align: center;
+    margin-top: 15px;}
+  #sig {
+    width: 25%;}
+
+
+
+  #footer-logo {
+    text-align: center;}
+  #footer-logo img {
+    width: 70%;}
+  .address-info div:last-of-type {
+    padding-left: 6px;}
+  .address-info div:first-of-type {
+    margin-right: 0;
+    padding-right: 6px;}
+
+
+
+  .links {
+    width: 90%;}
+  .links a {
+    font-size: 1em;}
+}

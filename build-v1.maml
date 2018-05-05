@@ -1,0 +1,3074 @@
+<Program Name="OCU 2018-2019" Version="1.0" DbId="0" CheckOutId="0" State="Start">
+  <Campaign Name="OCU 2018-2019 Student Search" Version="1.0" Id="1" DbId="0" CheckOutId="0" State="Start">
+    <CampaignElements>
+      <CampaignElement Id="1" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="ContactList" Category="TargetAudience" Name="Live (includes seeds)" Position="30,10" SharedCheckout="False">
+        <Comment>Anyone who has not visited their landing page.</Comment>
+        <Filter CriteriaJoinOperator="&amp;">
+          <AdvancedFilter CriteriaJoinOperator="&amp;">
+            <AdvancedCriteria Criteria="Achieved a Goal" AllContacts="False" CriteriaId="1" From="11/1/17" To="11/1/18" ProgramId="-1" InboundContext="All Visits" CampaignId="-1" InboundId="-3" CriteriaOption="10" Operator="Equal" Value="0" />
+          </AdvancedFilter>
+        </Filter>
+        <HookedEvents TriggerFireContext="Current Visit" />
+      </CampaignElement>
+      <CampaignElement Id="3" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="Microsite" Category="Inbound" Name="Microsite" Position="220,270" SharedCheckout="False">
+        <Events />
+        <CallbackTouchPoints>
+          <CallbackTouchPoint Id="1" DbId="0" Callback="http://weRHOME.oc.edu" />
+        </CallbackTouchPoints>
+        <ChildElements>
+          <ChildElement Id="1" DbId="0" Type="Page" IsVersion="False" Name="director.html" Position="160,20">
+            <Properties PageType="Page" IsHomePage="True" SkipPage="True" IsLoginRequired="False">
+              <HtmlContent />
+            </Properties>
+            <Flow DefaultNextChildName="default.html" DefaultNextChildId="3">
+              <FlowNextElement Id="2" Name="redirect.html">
+                <Filter CriteriaJoinOperator="&amp;">
+                  <Criteria Row="1" Field="purl" Operator="NotEqual" Value="" />
+                </Filter>
+              </FlowNextElement>
+              <FlowNextElement Id="3" Name="default.html">
+                <Filter CriteriaJoinOperator="&amp;" />
+              </FlowNextElement>
+            </Flow>
+            <Events />
+          </ChildElement>
+          <ChildElement Id="2" DbId="0" Type="Page" IsVersion="False" Name="redirect.html" Position="110,180">
+            <Properties PageType="Page" IsHomePage="False" SkipPage="False" IsLoginRequired="False">
+              <HtmlContent>&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+   location.href = "https://werhome.oc.edu/##purl##/werhome.html";
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;noscript&gt;Javascript must be enabled to continue.&lt;/noscript&gt;
+&lt;/body&gt;
+&lt;/html&gt;</HtmlContent>
+            </Properties>
+            <Flow />
+            <Events />
+          </ChildElement>
+          <ChildElement Id="3" DbId="0" Type="Page" IsVersion="False" Name="default.html" Position="270,180">
+            <Properties PageType="Page" IsHomePage="False" SkipPage="False" IsLoginRequired="False">
+              <HtmlContent />
+            </Properties>
+            <Flow />
+            <Events />
+          </ChildElement>
+          <ChildElement Id="4" DbId="0" Type="Page" IsVersion="False" Name="werhome.html" Position="110,310">
+            <Properties PageType="Page" IsHomePage="False" SkipPage="False" IsLoginRequired="False">
+              <HtmlContent>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="pragma" content="no-cache"&gt;
+    &lt;meta http-equiv="cache-control" content="no-cache"&gt;
+    &lt;title&gt;&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"&gt;
+    &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"&gt;
+    &lt;link rel="stylesheet" href="http://s3.amazonaws.com/ocu/assets/css/style.css"&gt;
+    &lt;script src="http://s3.amazonaws.com/ocu/node_modules/jquery/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script src="http://s3.amazonaws.com/enrollmentfuel/lib/track-v1.3.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+      $(document).ready(function() {
+        setCK('##purl##', 'werhome.oc.edu');
+      });
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="container-fluid"&gt;
+      &lt;div id="main-content"&gt;
+        &lt;div class="header"&gt;
+          &lt;img id="hoc" src="http://s3.amazonaws.com/ocu/assets/img/humans.jpeg" alt="humans-of-oc"&gt;
+          &lt;img id="hoc-mobile" src="http://s3.amazonaws.com/ocu/assets/img/hoc-mobile.jpeg" alt="humans-of-oc"&gt;
+          
+          &lt;img id="hoc-text" src="http://s3.amazonaws.com/ocu/assets/img/humans-text-2.png" alt="humans-of-oc"&gt;
+          &lt;img id="hoc-text-mobile" src="http://s3.amazonaws.com/ocu/assets/img/hoc-text-mobile.png" alt="humans-of-oc"&gt;
+
+          &lt;svg class="svg-object" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink"&gt;
+            &lt;filter id="blurMe"&gt;
+              &lt;feGaussianBlur in="SourceGraphic" stdDeviation="0" /&gt;
+            &lt;/filter&gt;
+            
+            &lt;image class="svg-object" xlink:href="http://s3.amazonaws.com/ocu/assets/img/humans-text-2.png" x="0" y="0" height="0" width="0" filter="url(#blurMe)" /&gt;
+          &lt;/svg&gt;
+
+        &lt;/div&gt;
+        
+        &lt;p style="line-height:1.7; width:90%; margin:30px auto;"&gt;
+          &lt;b style="font-size:1.3em;"&gt;Hey, ##firstname##!&lt;/b&gt;&lt;br/&gt;
+          &lt;br/&gt;
+          &lt;b&gt;Oklahoma Christian University has a special vibe. We Live Jesus Loud every day. We call OC home—and we want you to call OC home, too. Come for a campus visit! And tell us more about you. Which of the amazing things below at OC and Oklahoma City interests you?&lt;/b&gt;
+        &lt;/p&gt;
+
+        &lt;div class="row thing"&gt;
+          &lt;div class="col-xs-12 col-sm-6"&gt;
+            &lt;table&gt;
+              &lt;tbody&gt;
+                &lt;tr&gt;
+                  &lt;td class="icons" data-resp="location"&gt;
+                    &lt;div class="icon"&gt;&lt;img src="http://s3.amazonaws.com/ocu/assets/img/okWhite.svg" alt="location"&gt;&lt;/div&gt;
+                    &lt;div class="icon-clicked"&gt;&lt;img src="http://s3.amazonaws.com/ocu/assets/img/okRed.svg" alt="location"&gt;&lt;/div&gt;
+                  &lt;/td&gt;
+                  &lt;td class="desc"&gt;I'm excited to be close to Oklahoma City so I can live a "big" life.&lt;/td&gt;
+                &lt;/tr&gt;
+              &lt;/tbody&gt;
+            &lt;/table&gt;
+          &lt;/div&gt;
+          &lt;div class="col-xs-12 col-sm-6"&gt;
+            &lt;table&gt;
+              &lt;tbody&gt;
+                &lt;tr&gt;
+                  &lt;td class="icons" data-resp="team"&gt;
+                    &lt;div class="icon"&gt;&lt;img src="http://s3.amazonaws.com/ocu/assets/img/eagleWhite.svg" alt="location"&gt;&lt;/div&gt;
+                    &lt;div class="icon-clicked"&gt;&lt;img src="http://s3.amazonaws.com/ocu/assets/img/eagleRed.svg" alt="location"&gt;&lt;/div&gt;
+                  &lt;/td&gt;
+                  &lt;td class="desc"&gt;I want to be part of an athletic team and roll with Ike, the mascot.&lt;/td&gt;
+                &lt;/tr&gt;
+              &lt;/tbody&gt;
+            &lt;/table&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        
+        &lt;div class="row thing"&gt;
+          &lt;div class="col-xs-12 col-sm-6 item"&gt;
+            &lt;table&gt;
+              &lt;tbody&gt;
+                &lt;tr&gt;
+                  &lt;td class="icons" data-resp="spiritual"&gt;
+                    &lt;div class="icon"&gt;&lt;img src="http://s3.amazonaws.com/ocu/assets/img/bibleWhite.svg" alt="location"&gt;&lt;/div&gt;
+                    &lt;div class="icon-clicked"&gt;&lt;img src="http://s3.amazonaws.com/ocu/assets/img/bibleRed.svg" alt="location"&gt;&lt;/div&gt;
+                  &lt;/td&gt;
+                  &lt;td class="desc"&gt;It's great you have a spiritual life component. It's part of who I am.&lt;/td&gt;
+                &lt;/tr&gt;
+              &lt;/tbody&gt;
+            &lt;/table&gt;
+          &lt;/div&gt;
+          &lt;div class="col-xs-12 col-sm-6 item"&gt;
+            &lt;table&gt;
+              &lt;tbody&gt;
+                &lt;tr&gt;
+                  &lt;td class="icons" data-resp="internship"&gt;
+                    &lt;div class="icon"&gt;&lt;img src="http://s3.amazonaws.com/ocu/assets/img/cityWhite.svg" alt="location"&gt;&lt;/div&gt;
+                    &lt;div class="icon-clicked"&gt;&lt;img src="http://s3.amazonaws.com/ocu/assets/img/cityRed.svg" alt="location"&gt;&lt;/div&gt;
+                  &lt;/td&gt;
+                  &lt;td class="desc"&gt;I'm considering an internship at some point. You guys have a city booming with opportunity.&lt;/td&gt;
+                &lt;/tr&gt;
+              &lt;/tbody&gt;
+            &lt;/table&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="row thing"&gt;
+          &lt;div class="col-xs-12 col-sm-6 item"&gt;
+            &lt;table&gt;
+              &lt;tbody&gt;
+                &lt;tr&gt;
+                  &lt;td class="icons" data-resp="academics"&gt;
+                    &lt;div class="icon"&gt;&lt;img src="http://s3.amazonaws.com/ocu/assets/img/testTubeWhite.svg" alt="location"&gt;&lt;/div&gt;
+                    &lt;div class="icon-clicked"&gt;&lt;img src="http://s3.amazonaws.com/ocu/assets/img/testTubeRed.svg" alt="location"&gt;&lt;/div&gt;
+                  &lt;/td&gt;
+                  &lt;td class="desc"&gt;I want to be challenged academically. Love that you are among the best in the west!&lt;/td&gt;
+                &lt;/tr&gt;
+              &lt;/tbody&gt;
+            &lt;/table&gt;
+          &lt;/div&gt;
+          &lt;div class="col-xs-12 col-sm-6 item"&gt;
+            &lt;table&gt;
+              &lt;tbody&gt;
+                &lt;tr&gt;
+                  &lt;td class="icons" data-resp="community"&gt;
+                    &lt;div class="icon"&gt;&lt;img src="http://s3.amazonaws.com/ocu/assets/img/houseWhite.svg" alt="location"&gt;&lt;/div&gt;
+                    &lt;div class="icon-clicked"&gt;&lt;img src="http://s3.amazonaws.com/ocu/assets/img/houseRed.svg" alt="location"&gt;&lt;/div&gt;
+                  &lt;/td&gt;
+                  &lt;td class="desc"&gt;OC is home means something to me. It's important that I matter during the next four years of college.&lt;/td&gt;
+                &lt;/tr&gt;
+              &lt;/tbody&gt;
+            &lt;/table&gt;
+          &lt;/div&gt;
+
+          &lt;form method="post" id="form"&gt;
+            &lt;div style="display:none;"&gt;
+              &lt;input type="text" name="form_resp" value=""&gt;
+              &lt;input type="text" name="submitaction" value=""&gt;
+              &lt;input type="text" name="QRcodeUsed" id="QRcodeUsed" value=""&gt;
+              &lt;input type="text" name="engagePlatform" id="engagePlatform" value=""&gt;
+              &lt;input type="text" name="engageBrowserName" id="engageBrowserName" value=""&gt; 
+              &lt;input type="text" name="engageBrowserCodeName" id="engageBrowserCodeName" value=""&gt;
+            &lt;/div&gt;
+            
+            &lt;div id="actions"&gt;
+              &lt;button id="ready" data-action="I'm Ready"&gt;I'm Ready&amp;mdash;What's Next?&lt;/button&gt;
+              &lt;button id="visit" data-action="I'd Like to Visit"&gt;I'd Like To Visit&lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/form&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div id="footer"&gt;
+        &lt;div class="row"&gt;
+          &lt;div class="col-xs-12 col-sm-6" id="footer-logo"&gt;
+            &lt;img src="http://s3.amazonaws.com/ocu/assets/img/ocu-logo.svg" alt="ocu-logo"&gt;
+          &lt;/div&gt;
+          &lt;div class="col-xs-12 col-sm-6 address-info"&gt;
+            &lt;div&gt;www.oc.edu&lt;br/&gt;800-877-5010&lt;/div&gt;
+            &lt;div&gt;2501 E. Memorial Road&lt;br/&gt;Oklahoma City, OK&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"&gt;&lt;/script&gt;
+    &lt;script src="http://s3.amazonaws.com/ocu/assets/js/view.js"&gt;&lt;/script&gt;
+    &lt;script src="http://s3.amazonaws.com/ocu/assets/js/controller.js"&gt;&lt;/script&gt;
+    &lt;script src="http://s3.amazonaws.com/ocu/node_modules/velocity/velocity.min.js"&gt;&lt;/script&gt;
+    &lt;script src="http://s3.amazonaws.com/ocu/node_modules/velocity/velocity.ui.min.js"&gt;&lt;/script&gt;
+    &lt;script src="http://s3.amazonaws.com/ocu/node_modules/Snap.svg-0.5.1/dist/snap.svg-min.js"&gt;&lt;/script&gt;
+    &lt;script src="http://s3.amazonaws.com/ocu/assets/js/animations.js?v=1"&gt;&lt;/script&gt;
+    &lt;script src="http://s3-us-west-1.amazonaws.com/rsrc.enrollmentfuel.com/utilities/micrositeprofiler.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</HtmlContent>
+            </Properties>
+            <Form>
+              <Input Type="TextBox" Name="form_resp" IsEncrypted="False">
+                <IsRequired>False</IsRequired>
+                <ValidationRegex />
+                <ValidationRegexMessage />
+              </Input>
+              <Input Type="TextBox" Name="submitaction" IsEncrypted="False">
+                <IsRequired>False</IsRequired>
+                <ValidationRegex />
+                <ValidationRegexMessage />
+              </Input>
+              <Input Type="TextBox" Name="QRcodeUsed" IsEncrypted="False">
+                <IsRequired>False</IsRequired>
+                <ValidationRegex />
+                <ValidationRegexMessage />
+              </Input>
+              <Input Type="TextBox" Name="engagePlatform" IsEncrypted="False">
+                <IsRequired>False</IsRequired>
+                <ValidationRegex />
+                <ValidationRegexMessage />
+              </Input>
+              <Input Type="TextBox" Name="engageBrowserName" IsEncrypted="False">
+                <IsRequired>False</IsRequired>
+                <ValidationRegex />
+                <ValidationRegexMessage />
+              </Input>
+              <Input Type="TextBox" Name="engageBrowserCodeName" IsEncrypted="False">
+                <IsRequired>False</IsRequired>
+                <ValidationRegex />
+                <ValidationRegexMessage />
+              </Input>
+            </Form>
+            <Flow>
+              <FlowNextElement Id="5" Name="thanks.html">
+                <Filter CriteriaJoinOperator="&amp;" />
+              </FlowNextElement>
+            </Flow>
+            <Events>
+              <Event EventId="30501" Score="10" GoalId="10" IsDistinct="False" />
+              <Event EventId="30502" Score="20" GoalId="2" IsDistinct="False" />
+            </Events>
+          </ChildElement>
+          <ChildElement Id="5" DbId="0" Type="Page" IsVersion="False" Name="thanks.html" Position="110,440">
+            <Properties PageType="Page" IsHomePage="False" SkipPage="False" IsLoginRequired="False">
+              <HtmlContent>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="pragma" content="no-cache"&gt;
+    &lt;meta http-equiv="cache-control" content="no-cache"&gt;
+    &lt;title&gt;&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"&gt;
+    &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"&gt;
+    &lt;link rel="stylesheet" href="assets/css/style.css"&gt;
+    &lt;script src="http://s3.amazonaws.com/ocu/node_modules/jquery/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script src="http://s3.amazonaws.com/enrollmentfuel/lib/track-v1.3.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+      $(document).ready(function() {
+        setCK('##purl##', 'werhome.oc.edu');
+      });
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="container-fluid"&gt;
+      &lt;div id="main-content"&gt;
+        &lt;div class="header"&gt;
+          &lt;img id="hoc" class="hoc-banner" src="assets/img/hoc2.JPG" alt="humans-of-oc"&gt;
+          &lt;img id="hoc2-mobile" class="hoc-banner" src="assets/img/hoc2-mobile.JPG" alt="humans-of-oc"&gt;
+        &lt;/div&gt;
+        
+        &lt;p class="main-text"&gt;
+          &lt;b style="font-size:1.3em;"&gt;##firstname##&lt;/b&gt;&lt;br/&gt;
+          &lt;br/&gt;
+          &lt;b&gt;Humans of OC do amazing things. We can tell you will, too. Thanks for letting us know:&lt;/b&gt;
+        &lt;/p&gt;
+
+        &lt;p class="main-text"&gt;
+          
+        &lt;/p&gt;
+
+        &lt;p class="main-text"&gt;
+          Because we know this information about you, we can ensure you &lt;b&gt;Live Jesus Loud&lt;/b&gt;, everyday.&lt;br/&gt;
+          &lt;br/&gt;
+          Come visit us, ##firstname##&amp;mdash;Oklahoma Christian and the city are home&amp;mdash;and we want you to be part of the family. Let's get your visit scheduled right away, using the link below.&lt;br/&gt;
+          &lt;br/&gt;
+          &lt;img id="sig" src="assets/img/JancySig.jpg" alt="Jancy Scott"&gt;&lt;br/&gt;
+          Jancy Scott&lt;br/&gt;
+          Director of Admission
+        &lt;/p&gt;
+
+        &lt;div class="links"&gt;
+          &lt;div class="row"&gt;
+            &lt;div class="col-xs-6"&gt;
+              &lt;div class="link"&gt;
+                &lt;a target="_blank" href="##visit##"&gt;Visit Campus&lt;/a&gt;
+              &lt;/div&gt;
+              
+            &lt;/div&gt;
+            &lt;div class="col-xs-6"&gt;
+              &lt;div class="link"&gt;
+                &lt;a target="_blank" href="##application##"&gt;Application&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="row"&gt;
+            &lt;div class="col-xs-6"&gt;
+              &lt;div class="link"&gt;
+                &lt;a target="_blank" href="##about-oc##"&gt;About OC&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-xs-6"&gt;
+              &lt;div class="link"&gt;
+                &lt;a target="_blank" href="##financial-aid##"&gt;Financial Aid&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="row"&gt;
+            &lt;div class="col-xs-6"&gt;
+              &lt;div class="link"&gt;
+                &lt;a target="_blank" href="##majors##"&gt;Majors&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-xs-6"&gt;
+              &lt;div class="link"&gt;
+                &lt;a target="_blank" href="##life-beyond-campus##"&gt;Life Beyond Campus&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      
+      &lt;div id="footer"&gt;
+        &lt;div class="row"&gt;
+          &lt;div class="col-xs-12 col-sm-6" id="footer-logo"&gt;
+            &lt;img src="http://s3.amazonaws.com/ocu/assets/img/ocu-logo.svg" alt="ocu-logo"&gt;
+          &lt;/div&gt;
+          &lt;div class="col-xs-12 col-sm-6 address-info"&gt;
+            &lt;div&gt;www.oc.edu&lt;br/&gt;800-877-5010&lt;/div&gt;
+            &lt;div&gt;2501 E. Memorial Road&lt;br/&gt;Oklahoma City, OK&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/view.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/controller.js"&gt;&lt;/script&gt;
+    &lt;script src="node_modules/velocity/velocity.min.js"&gt;&lt;/script&gt;
+    &lt;script src="node_modules/velocity/velocity.ui.min.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/animations.js"&gt;&lt;/script&gt;
+    &lt;script src="http://s3-us-west-1.amazonaws.com/rsrc.enrollmentfuel.com/utilities/micrositeprofiler.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</HtmlContent>
+            </Properties>
+            <Flow />
+            <Events>
+              <Event EventId="30503" Score="20" GoalId="2" EventOption="oc.edu" Operator="Contains" IsDistinct="False" />
+            </Events>
+          </ChildElement>
+          <ChildElement Id="6" DbId="0" Type="Page" IsVersion="False" Name="tracker.html" Position="470,20">
+            <Properties PageType="Page" IsHomePage="False" SkipPage="False" IsLoginRequired="False">
+              <HtmlContent>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script src="https://s3.amazonaws.com/enrollmentfuel/lib/track-v1.3.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+   cbEndpoint('##callback##', '##purl##');
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;</HtmlContent>
+            </Properties>
+            <Flow />
+            <Events>
+              <Event EventId="30501" Score="5" GoalId="2" IsDistinct="False" />
+            </Events>
+          </ChildElement>
+          <ChildElement Id="7" DbId="0" Type="Page" IsVersion="False" Name="tattoo.html" Position="350,20">
+            <Properties PageType="Page" IsHomePage="False" SkipPage="False" IsLoginRequired="False">
+              <HtmlContent>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script src="https://s3.amazonaws.com/enrollmentfuel/lib/track-v1.3.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+   runThis('MFI', 'werhome.oc.edu', 'oc.edu');
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;</HtmlContent>
+            </Properties>
+            <Flow />
+            <Events />
+          </ChildElement>
+        </ChildElements>
+        <ChildConnections>
+          <ChildConnection StartElementId="1" EndElementId="2" />
+          <ChildConnection StartElementId="1" EndElementId="3" />
+          <ChildConnection StartElementId="4" EndElementId="5" />
+          <ChildConnection StartElementId="2" EndElementId="4" IsLogical="True" />
+        </ChildConnections>
+        <Properties>
+          <BaseUrlCollection>
+            <BaseUrl Id="1" DbId="0" URL="weRHOME.oc.edu" Extension="" Outbound_Id="0" Outbound_DbId="0" Parent_Id="0" PurlPosition="Prefix" Domain="weRHOME.oc.edu" SSL="False" SearchEngineAllowed="False" />
+          </BaseUrlCollection>
+          <Settings SessionTimeout="60">
+            <InvalidPurl>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Did you type your PURL correctly?&lt;/title&gt;
+
+&lt;!-- This message can display HTML, or can automatically redirect to any absolute URL, using javascript:
+
+&lt;script type="text/javascript"&gt;
+window.location = "http://www.microsite-domain.com/your-page.html"
+&lt;/script&gt;
+
+... or a meta refresh:
+
+    &lt;meta http-equiv="refresh" content="0;URL='http://www.microsite-domain.com/your-page.html'"/&gt;    
+
+Either method should be within your &lt;head&gt; tags.  
+
+--&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!-- Please note that since the Contact is requesting an invalid PURL, you cannot use any variables (like ##firstname##) within your content.  --&gt;
+Are you sure you typed your Personalized URL correctly? Please try again.
+&lt;/body&gt;
+&lt;/html&gt;
+</InvalidPurl>
+            <PageNotFound>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Page not found!&lt;/title&gt;
+
+&lt;!-- This message can display HTML, or can automatically redirect to any absolute URL, using javascript:
+
+&lt;script type="text/javascript"&gt;
+window.location = "http://www.microsite-domain.com/your-page.html"
+&lt;/script&gt;
+
+... or a meta refresh:
+
+    &lt;meta http-equiv="refresh" content="0;URL='http://www.microsite-domain.com/your-page.html'"/&gt;    
+
+Either method should be within your &lt;head&gt; tags.  
+
+--&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!-- Please note that since the Contact is requesting a valid PURL but non-existent page, you can use any variable (like ##firstname##) within your content.  --&gt;
+Oops! ##firstname default="Sir/Madam"##,  we are really sorry but the page you requested could not be found. Please check the URL and try again.
+&lt;/body&gt;
+&lt;/html&gt;
+</PageNotFound>
+            <Error>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Something happened.&lt;/title&gt;
+
+&lt;!-- This message can display HTML, or can automatically redirect to any absolute URL, using javascript:
+
+&lt;script type="text/javascript"&gt;
+window.location = "http://www.microsite-domain.com/your-page.html"
+&lt;/script&gt;
+
+... or a meta refresh:
+
+    &lt;meta http-equiv="refresh" content="0;URL='http://www.microsite-domain.com/your-page.html'"/&gt;    
+
+Either method should be within your &lt;head&gt; tags.  
+
+--&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!-- In addition to supporting any contact variable, this page also supports a special variable: ##error##, which is a system-generated description of the error.--&gt;
+Oops! I'm sorry ##firstname default="Sir/Madam"##, something went wrong! Please contact the site administrator. The following error has occurred: ##error##
+&lt;/body&gt;
+&lt;/html&gt;
+</Error>
+          </Settings>
+        </Properties>
+      </CampaignElement>
+      <CampaignElement Id="6" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="ContactList" Category="TargetAudience" Name="ContactList" Position="170,390" SharedCheckout="False">
+        <Filter CriteriaJoinOperator="&amp;">
+          <Criteria Row="1" Field="isseed" Operator="Equal" Value="False" />
+        </Filter>
+        <HookedEvents TriggerFireContext="All Visits">
+          <Event EventId="30501" ElementId="3" ChildElementId="4" />
+        </HookedEvents>
+      </CampaignElement>
+      <CampaignElement Id="7" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="Email" Category="Outbound" Name="Nurture Email 1" Position="170,510" SharedCheckout="False" IsTrackingRequired="False" RuleGroup="nurture">
+        <Events>
+          <Event EventId="20104" GoalId="8" IsDistinct="False" />
+          <Event EventId="20105" GoalId="4" IsDistinct="False" />
+          <Event EventId="20105" Score="20" GoalId="2" EventOption="oc.edu" Operator="Contains" IsDistinct="False" />
+        </Events>
+        <Properties>
+          <Messages>
+            <Message Id="1">
+              <ToAddress>##email##</ToAddress>
+              <FromName>Jancy Scott</FromName>
+              <FromAddress>jancy.scott@oc.edu</FromAddress>
+              <ReplyTo>admissions@oc.edu</ReplyTo>
+              <Subject>##firstname##, make connections ##emailsubjectlineaddendum##</Subject>
+              <HtmlContent>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+	&lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type" /&gt;
+	&lt;meta content="width=device-width, initial-scale=1.0" name="viewport" /&gt;
+	&lt;style type="text/css"&gt;
+		body {width:100% !important; -webkit-text-size-adjust:none; -ms-text-size-adjust:100%; margin:0; padding:0;}
+		img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic; border:none;}
+		a img {border:none;}
+		table {mso-table-lspace:0pt; mso-table-rspace:0pt;}
+		table, td, .no-contextual-highlighting p span, a, p, span {font-family:arial !important; border-bottom:0; padding:0; margin:0;}
+		.no-contextual-highlighting {border-bottom:none !important; text-decoration: none;}
+		.mobile-info {display:none !important;}
+		.wide-info {display:block !important; display:table !important;}
+					
+		@media only screen and (max-device-width: 736px) {
+			a[href^="tel"], a[href^="sms"] {
+				text-decoration: none;
+				pointer-events: none;
+				cursor: default;}
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+				text-decoration: default;
+				pointer-events: auto;
+				cursor: default;}
+				.wide-info {display:none !important;}
+				.mobile-info {display:table !important;}
+		}
+					
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+			a[href^="tel"], a[href^="sms"] {
+				text-decoration: none;
+				pointer-events: none;
+				cursor: default;}
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+				text-decoration: default;
+				pointer-events: auto;
+				cursor: default;} 
+		}
+					
+		@media only screen and (device-pixel-ratio: 2) {
+			/* Put your iPhone styles in here */
+
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;center&gt;
+  &lt;!--[if gte mso 9|(IE)]&gt;
+		&lt;style&gt;
+			
+		&lt;/style&gt;
+		&lt;table width="610"&gt;&lt;tr&gt;&lt;td&gt;
+		&lt;![endif]--&gt;&lt;!--[if mso 16]&gt;
+		&lt;style&gt;
+			
+		&lt;/style&gt;
+	&lt;![endif]--&gt;
+  &lt;div style="max-width: 610px; width: 100%"&gt;
+    &lt;img alt="img-banner" src="http://s3.amazonaws.com/ocu/assets/img/nurture1.JPG" style="max-width:610px; width:100%" width="610" /&gt;
+
+    &lt;table border="0" cellpadding="0" cellspacing="0" style="max-width:610px; width:100%" width="610"&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td align="center" width="610" style="padding-left:15px; padding-right:15px;"&gt;
+						&lt;p style="text-align:left; line-height:16pt; margin:0; padding:0;"&gt;
+							&lt;span&gt;
+								&lt;br/&gt;
+								&lt;b&gt;Hey ##firstname##,&lt;/b&gt;&lt;br/&gt;
+								&lt;br/&gt;
+								At &lt;a href="##oc##"&gt;OC&lt;/a&gt;, you'll make connections with mentors who have your best interest at heart. From the &lt;a href="##admissions##"&gt;admissions&lt;/a&gt; staff to professors and beyond, you will find that the people of OC are dedicated to conveying the love of Christ in everything they do&amp;mdash;including their commitment to making a high-quality Christian education &lt;a href="##affordable##"&gt;affordable&lt;/a&gt;!&lt;br/&gt;
+								&lt;br/&gt;
+								Offering a range of &lt;a href="##scholarships##"&gt;scholarships&lt;/a&gt; and &lt;a href="##financial-aid##"&gt;financial aid&lt;/a&gt;, OC awards more than $19 million every year.&lt;br/&gt;
+								&lt;br/&gt;
+								&lt;a href="##apply##"&gt;Apply today&lt;/a&gt; to learn about the aid you may be eligible for, and start preparing to put your fingerprint on the world.&lt;br/&gt;
+								&lt;br/&gt;
+								&lt;img src="http://s3.amazonaws.com/ocu/assets/img/JancySig.jpg" alt="Jancy Scott"/&gt;&lt;br/&gt;
+								Jancy Scott&lt;br/&gt;
+								Director of Admissions&lt;br/&gt;
+								&lt;br/&gt;
+							&lt;/span&gt;
+						&lt;/p&gt;
+          &lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table class="mobile-info" border="0" cellpadding="0" cellspacing="0" width="610" bgcolor="#393738" style="padding:6px 0; max-width:610px; width:100%; display:table;"&gt;
+			&lt;tbody&gt;
+				&lt;tr&gt;
+					&lt;td align="center" colspan="2"&gt;
+						&lt;img src="http://s3.amazonaws.com/ocu/assets/img/footer-logo.jpg" alt="OCU Logo" style="width:85%;" /&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;td align="center" class="no-contextual-highlighting" style="font-size:0.8em;"&gt;
+						&lt;a href="#" style="color:#502e2e; text-decoration:none;"&gt;
+							&lt;span style="color:#ffffff;"&gt;www.oc.edu&lt;br/&gt;800-877-5010&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+					&lt;td align="center" class="no-contextual-highlighting" style="font-size:0.8em; border-left:solid 1px white;"&gt;
+						&lt;a href="#" style="text-decoration:none; color:#ffffff;"&gt;
+							&lt;span style="color:#ffffff;"&gt;2501 E. Memorial Road&lt;br/&gt;Oklahoma City, OK&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table class="wide-info" border="0" cellpadding="0" cellspacing="0" width="610" bgcolor="#393738" style="max-width:610px; width:100%; display:none;"&gt;
+			&lt;tbody&gt;
+				&lt;tr&gt;
+					&lt;td class="no-contextual-highlighting" align="center" style="width:45%; padding:15px 0;" width="275"&gt;
+						&lt;img src="http://s3.amazonaws.com/ocu/assets/img/footer-logo.jpeg" alt="OCU Logo" style="width:85%;" width="220" /&gt;
+					&lt;/td&gt;
+					&lt;td align="center" class="no-contextual-highlighting info" style="width:25%; padding:15px 0; font-size:0.8em;" width="160"&gt;
+						&lt;a href="#" style="color:#ffffff; text-decoration:none;"&gt;
+							&lt;span style="color:#ffffff;"&gt;www.oc.edu&lt;br/&gt;800-877-5010&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+					
+					&lt;td align="center" class="no-contextual-highlighting info" style="width:30%; padding:15px 0; font-size:0.8em;" width="175"&gt;
+						&lt;div style="border-left:solid 1px #ffffff;"&gt;
+							&lt;p style="text-align:left; margin-left:6px; margin-right:6px;"&gt;
+								&lt;a href="#" style="text-decoration:none; color:#ffffff;"&gt;
+									&lt;span style="color:#ffffff;"&gt;2501 E. Memorial Road&lt;br/&gt;Oklahoma City, OK&lt;/span&gt;
+								&lt;/a&gt;
+							&lt;/p&gt;
+						&lt;/div&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table border="0" cellpadding="0" cellspacing="0" style="max-width:610px; width:100%" width="610"&gt;
+			&lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td class="no-contextual-highlighting" align="center" style="padding:12px;"&gt;
+          	&lt;p style="font-size:8pt; line-height:8pt;"&gt;
+              &lt;span style="color:black;"&gt;This message is being sent to ##firstname## ##lastname## at ##email##. If you are not ##firstname## ##lastname## or no longer wish to receive messages of this nature, please &lt;a style="color:blue;" href="##Unsubscribe RedirectURL="https://s3-us-west-1.amazonaws.com/rsrc.enrollmentfuel.com/unsubscribed.htm" ##"&gt;Unsubscribe&lt;/a&gt;&lt;/span&gt;
+          	&lt;/p&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+  &lt;!--[if mso]&gt;
+		&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+	&lt;![endif]--&gt;
+	&lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</HtmlContent>
+              <TextContent>Hey ##firstname##,
+
+At OC, you'll make connections with mentors who have your best interest at heart. From the admissions staff to professors and beyond, you will find that the people of OC are dedicated to conveying the love of Christ in everything they do—including their commitment to making a high-quality Christian education affordable!
+
+Offering a range of scholarships and financial aid, OC awards more than $19 million every year.
+Apply today to learn about the aid you may be eligible for, and start preparing to put your fingerprint on the world.
+
+
+Jancy Scott
+Director of Admissions
+www.oc.edu
+800-877-5010
+2501 E. Memorial Road
+Oklahoma City, OK
+ 
+This message is being sent to ##firstname## ##lastname## at ##email##. If you are not ##firstname## ##lastname## or no longer wish to receive messages of this nature, please Unsubscribe at:
+##Unsubscribe RedirectURL="https://s3-us-west-1.amazonaws.com/rsrc.enrollmentfuel.com/unsubscribed.htm" ##
+</TextContent>
+            </Message>
+          </Messages>
+        </Properties>
+      </CampaignElement>
+      <CampaignElement Id="10" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="OutboundApplication" Category="Outbound" Name="site tracking" Position="320,510" SharedCheckout="False" IsTrackingRequired="False">
+        <Events>
+          <Event EventId="201913" Score="5" GoalId="2" IsDistinct="False" />
+        </Events>
+        <Properties ServiceTypeID="2019" ApplicationVersion="1.0">
+          <Configs>
+            <Config Key="URI">http://studio.afw.mdl.io/api/OutboundApp/AppCallback?serviceTypeId=2019&amp;identifier=##identifier##&amp;accountId=##accountid##&amp;outboundId=##outboundid##&amp;outboundContactId=##OutboundContact_ID##&amp;isTrigger=true</Config>
+            <Config Key="Headers"></Config>
+            <Config Key="AuthenticationType">None</Config>
+            <Config Key="Authentication"></Config>
+            <Config Key="Method">Post</Config>
+            <Config Key="ContentType">Json</Config>
+            <Config Key="Body"></Config>
+            <Config Key="JsBody">var id = "&amp;identifier=##identifier##";
+var aid = "&amp;accountId=##accountid##";
+var oid = "&amp;outboundId=##outboundid##";
+var ocid = "&amp;outboundContactId=##OutboundContact_ID##";
+
+JSON.stringify({
+    callback: id + aid + oid + ocid + "&amp;isTrigger=true",
+    eventid: "201912",
+    eventoption: "SetCookie",
+    date: (new Date()).toISOString()
+});</Config>
+            <Config Key="ResponseHandler"></Config>
+            <Config Key="JsResponseHandler"></Config>
+            <Config Key="CallbackHandler"></Config>
+            <Config Key="JsCallbackHandler">var req = ##request##;
+
+if( req.eventid == "201912" ) {
+  var contact = [
+    { Key : "callback", Value : req.callback },
+    { Key : "eventid", Value : "201912" },
+    { Key : "eventoption", Value : "SetCookie" },
+    { Key : "date", Value : (new Date()).toISOString() }
+  ];
+}
+
+else if( req[0].Value == "201913" ) {
+  var contact = [
+    { Key : "eventid", Value : req[0].Value },
+    { Key : "date", Value : req[1].Value },
+    { Key : "eventoption", Value : req[2].Value }
+  ];
+}
+
+JSON.stringify(contact);</Config>
+            <Config Key="CallbackResponse"></Config>
+          </Configs>
+          <Fields />
+        </Properties>
+      </CampaignElement>
+      <CampaignElement Id="11" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="OutboundApplication" Category="Outbound" Name="enrollmentnotified" Position="830,510" SharedCheckout="False">
+        <Events />
+        <Properties ServiceTypeID="2019" ApplicationVersion="1.0">
+          <Configs>
+            <Config Key="URI">http://studio.afw.mdl.io/api/OutboundApp/AppCallback?serviceTypeId=2019&amp;identifier=##identifier##&amp;accountId=##accountid##&amp;outboundId=##outboundid##&amp;outboundContactId=##OutboundContact_ID##</Config>
+            <Config Key="Headers"></Config>
+            <Config Key="AuthenticationType">None</Config>
+            <Config Key="Authentication"></Config>
+            <Config Key="Method">Post</Config>
+            <Config Key="ContentType">Json</Config>
+            <Config Key="Body"></Config>
+            <Config Key="JsBody"></Config>
+            <Config Key="ResponseHandler"></Config>
+            <Config Key="JsResponseHandler"></Config>
+            <Config Key="CallbackHandler"></Config>
+            <Config Key="JsCallbackHandler">JSON.stringify([
+   { Key : "enrollmentnotified", Value : "Yes" },
+   { Key : "eventid", Value : "201916" },
+   { Key : "date", Value : (new Date()).toISOString() },
+   { Key : "eventoption", Value : "enrollmentnotified" }
+]);</Config>
+            <Config Key="CallbackResponse"></Config>
+          </Configs>
+          <Fields />
+        </Properties>
+      </CampaignElement>
+      <CampaignElement Id="12" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="ContactList" Category="TargetAudience" Name="contact list" Position="830,390" SharedCheckout="False">
+        <Filter CriteriaJoinOperator="&amp;">
+          <Criteria Row="1" Field="enrollmentnotified" Operator="Equal" Value="" />
+          <AdvancedFilter CriteriaJoinOperator="&amp;">
+            <AdvancedCriteria Criteria="Achieved a Goal" AllContacts="False" CriteriaId="1" From="11/25/17" To="11/26/18" ProgramId="-1" InboundContext="All Visits" CriteriaOption="10" Operator="GreaterThan" Value="0" />
+          </AdvancedFilter>
+        </Filter>
+        <HookedEvents TriggerFireContext="Current Visit" />
+      </CampaignElement>
+      <CampaignElement Id="13" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="OutboundReport" Category="Outbound" Name="Raw Data" Position="980,510" SharedCheckout="False">
+        <Events />
+        <Properties ServiceTypeID="3000" ApplicationVersion="1.0">
+          <Settings Emails="" DataRange="Fixed" FromDate="11/25/17 12:00 AM" ToDate="11/26/17 12:00 AM" />
+          <Configs>
+            <Config Key="Email">ray@7bridgesmarketing.com</Config>
+            <Config Key="FtpUrl"></Config>
+            <Config Key="FtpUsername"></Config>
+            <Config Key="FtpPassword"></Config>
+          </Configs>
+          <Fields Schema="Flat">
+            <Field Name="Contact_ID">Contact_ID</Field>
+            <Field Name="PURL">PURL</Field>
+            <Field Name="First Name">FirstName</Field>
+            <Field Name="Last Name">LastName</Field>
+            <Field Name="Email">Email</Field>
+            <Field Name="Address">Address1</Field>
+            <Field Name="City">City</Field>
+            <Field Name="State">State</Field>
+            <Field Name="Country">Country</Field>
+            <Field Name="Zip">Zip</Field>
+            <Field Name="Date">Date</Field>
+            <Field Name="Year">Year</Field>
+            <Field Name="Month">Month</Field>
+            <Field Name="Day">Day</Field>
+            <Field Name="Hour">Hour</Field>
+            <Field Name="Weekday">Weekday</Field>
+            <Field Name="Quarter">Quarter</Field>
+            <Field Name="Element Type">ServiceType_ID</Field>
+            <Field Name="Event">Event_ID</Field>
+            <Field Name="Event Info">EventOption</Field>
+            <Field Name="Score">Score</Field>
+            <Field Name="Goal">Goal_ID</Field>
+            <Field Name="Outbound">Outbound_ID</Field>
+            <Field Name="Schedule">OutboundSchedule_ID</Field>
+            <Field Name="Inbound">Inbound_ID</Field>
+            <Field Name="Page">InboundDetail_ID</Field>
+            <Field Name="URL">URL</Field>
+            <Field Name="Duration">Duration</Field>
+            <Field Name="Question">FormInput_Name</Field>
+            <Field Name="Answer">FormResponse</Field>
+            <Field Name="Question Type">ResponseType</Field>
+            <Field Name="Browser">Browser</Field>
+            <Field Name="OS">OS</Field>
+          </Fields>
+          <Criteria All="False">
+            <Outbounds All="False">
+              <Outbound Id="10">
+                <Events All="False">
+                  <Event Id="201913" />
+                </Events>
+                <Schedules All="False" />
+              </Outbound>
+            </Outbounds>
+            <Inbounds All="False" />
+          </Criteria>
+        </Properties>
+      </CampaignElement>
+      <CampaignElement Id="14" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="ContactList" Category="TargetAudience" Name="ContactList" Position="680,390" SharedCheckout="False">
+        <Filter CriteriaJoinOperator="&amp;">
+          <AdvancedFilter CriteriaJoinOperator="|">
+            <AdvancedCriteria Criteria="Achieved a Score" AllContacts="False" CriteriaId="3" From="11/26/17" To="11/26/18" Operator="GreaterThan" Value="0" />
+            <AdvancedCriteria Criteria="Achieved a Score" AllContacts="False" CriteriaId="3" From="11/26/17" To="11/26/18" Operator="GreaterThan" Value="0" />
+          </AdvancedFilter>
+        </Filter>
+        <HookedEvents TriggerFireContext="Current Child Visit" />
+      </CampaignElement>
+      <CampaignElement Id="15" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="ContactList" Category="TargetAudience" Name="ContactList" Position="320,390" SharedCheckout="False">
+        <Filter CriteriaJoinOperator="&amp;" />
+        <HookedEvents TriggerFireContext="Current Child Visit">
+          <Event EventId="30501" ElementId="3" ChildElementId="6" />
+          <Event EventId="30501" ElementId="3" ChildElementId="7" />
+        </HookedEvents>
+      </CampaignElement>
+      <CampaignElement Id="16" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="ContactList" Category="TargetAudience" Name="ContactList" Position="530,390" SharedCheckout="False">
+        <Filter CriteriaJoinOperator="&amp;" />
+        <HookedEvents TriggerFireContext="Current Visit" />
+      </CampaignElement>
+      <CampaignElement Id="17" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="OutboundReport" Category="Outbound" Name="clickCAPTURE" Position="530,510" SharedCheckout="False">
+        <Events />
+        <Properties ServiceTypeID="3000" ApplicationVersion="1.0">
+          <Settings Emails="" DataRange="Fixed" FromDate="11/25/17 12:00 AM" ToDate="11/26/18 12:00 AM" />
+          <Configs>
+            <Config Key="Email">ray@7bridgesmarketing.com</Config>
+            <Config Key="FtpUrl">ftp://52.91.158.44/OCU/clickCAPTURE/</Config>
+            <Config Key="FtpUsername">guest</Config>
+            <Config Key="FtpPassword">muppets</Config>
+          </Configs>
+          <Fields Schema="Flat">
+            <Field Name="efcid">EFCID</Field>
+            <Field Name="PURL">PURL</Field>
+            <Field Name="First Name">FirstName</Field>
+            <Field Name="Last Name">LastName</Field>
+            <Field Name="Email">Email</Field>
+            <Field Name="Address">Address1</Field>
+            <Field Name="City">City</Field>
+            <Field Name="State">State</Field>
+            <Field Name="Zip">Zip</Field>
+            <Field Name="phone">Phone</Field>
+            <Field Name="mobile">Mobile</Field>
+            <Field Name="Date">Date</Field>
+            <Field Name="Event Info">EventOption</Field>
+            <Field Name="gender">Gender</Field>
+            <Field Name="highschool">Highschool_Name</Field>
+            <Field Name="gradyear">GraduationYear</Field>
+            <Field Name="ceeb">Highschool_CEEB</Field>
+            <Field Name="gpa">gpa</Field>
+            <Field Name="listsource">ListSource</Field>
+            <Field Name="BrowserVersion">BrowserVersion</Field>
+            <Field Name="Browser">Browser</Field>
+            <Field Name="OS">OS</Field>
+          </Fields>
+          <Criteria All="False">
+            <Outbounds All="False">
+              <Outbound Id="10">
+                <Events All="False">
+                  <Event Id="201913" />
+                </Events>
+                <Schedules All="False" />
+              </Outbound>
+            </Outbounds>
+            <Inbounds All="False" />
+          </Criteria>
+        </Properties>
+      </CampaignElement>
+      <CampaignElement Id="21" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="ContactList" Category="TargetAudience" Name="Ray" Position="180,10" SharedCheckout="False">
+        <Filter CriteriaJoinOperator="&amp;">
+          <Criteria Row="1" Field="email" Operator="Equal" Value="ray@7bridgesmarketing.com" />
+        </Filter>
+        <HookedEvents TriggerFireContext="Current Visit" />
+      </CampaignElement>
+      <CampaignElement Id="22" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="DirectMail" Category="Outbound" Name="Score" Position="680,510" SharedCheckout="False">
+        <Events />
+        <Properties>
+          <Messages>
+            <Message Type="CSV" Encoding="UTF 8">
+              <SelectedColumns>
+                <Column Alias="efcid">##efcid##</Column>
+                <Column Alias="Personalized URL">##purl##</Column>
+                <Column Alias="score">##score ProgramId="1" CampaignId="1" From="11/26/2017 1:14:38 AM" To="11/26/2018 12:00:00 AM" ##</Column>
+                <Column Alias="First Name">##firstname##</Column>
+                <Column Alias="Last Name">##lastname##</Column>
+                <Column Alias="Email">##email##</Column>
+                <Column Alias="Address 1">##address1##</Column>
+                <Column Alias="Address 2">##address2##</Column>
+                <Column Alias="City">##city##</Column>
+                <Column Alias="State">##state##</Column>
+                <Column Alias="Zip">##zip##</Column>
+                <Column Alias="Phone">##phone##</Column>
+                <Column Alias="Mobile">##mobile##</Column>
+                <Column Alias="gender">##gender##</Column>
+                <Column Alias="highschool">##highschool_name##</Column>
+                <Column Alias="gradyear">##graduationyear##</Column>
+                <Column Alias="ceeb">##highschool_ceeb##</Column>
+                <Column Alias="gpa">##gpa##</Column>
+                <Column Alias="listsource">##listsource##</Column>
+              </SelectedColumns>
+            </Message>
+            <EmailNotification>
+              <FromDisplayName>Foxtrot Team</FromDisplayName>
+              <ToAddress>ftp://guest:muppets@52.91.158.44/OCU/Score/</ToAddress>
+              <Subject>Direct Mail Export File</Subject>
+              <Body>$Link&lt;br/&gt;$Mapping</Body>
+            </EmailNotification>
+          </Messages>
+        </Properties>
+      </CampaignElement>
+      <CampaignElement Id="23" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="ContactList" Category="TargetAudience" Name="ContactList" Position="830,640" SharedCheckout="False">
+        <Filter CriteriaJoinOperator="&amp;" />
+        <HookedEvents TriggerFireContext="Current Child Visit">
+          <Event EventId="201916" ElementId="11" />
+        </HookedEvents>
+      </CampaignElement>
+      <CampaignElement Id="24" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="DirectMail" Category="Outbound" Name="new inquiries" Position="830,770" SharedCheckout="False" IsTrackingRequired="False">
+        <Events />
+        <Properties>
+          <Messages>
+            <Message Type="CSV" Encoding="UTF 8">
+              <SelectedColumns>
+                <Column Alias="efcid">##efcid##</Column>
+                <Column Alias="Personalized URL">##purl##</Column>
+                <Column Alias="First Name">##firstname##</Column>
+                <Column Alias="Last Name">##lastname##</Column>
+                <Column Alias="Email">##email##</Column>
+                <Column Alias="Address 1">##address1##</Column>
+                <Column Alias="Address 2">##address2##</Column>
+                <Column Alias="City">##city##</Column>
+                <Column Alias="State">##state##</Column>
+                <Column Alias="Zip">##zip##</Column>
+                <Column Alias="Mobile">##mobile##</Column>
+                <Column Alias="Phone">##phone##</Column>
+                <Column Alias="gender">##gender##</Column>
+                <Column Alias="gpa">##gpa##</Column>
+                <Column Alias="highschool">##highschool_name##</Column>
+                <Column Alias="ceeb">##highschool_ceeb##</Column>
+                <Column Alias="gradyear">##graduationyear##</Column>
+                <Column Alias="listsource">##listsource##</Column>
+                <Column Alias="submitaction">##submitaction##</Column>
+                <Column Alias="balloons_clicked">##balloons_clicked##</Column>
+                <Column Alias="Browser">##engagebrowsername##</Column>
+                <Column Alias="BrowserVersion">##engagebrowsercodename##</Column>
+                <Column Alias="platform">##engageplatform##</Column>
+              </SelectedColumns>
+            </Message>
+            <EmailNotification>
+              <FromDisplayName>Foxtrot Team</FromDisplayName>
+              <ToAddress>ftp://guest:muppets@52.91.158.44/OCU/Inquiries/</ToAddress>
+              <Subject>Direct Mail Export File</Subject>
+              <Body>$Link&lt;br/&gt;$Mapping</Body>
+            </EmailNotification>
+          </Messages>
+        </Properties>
+      </CampaignElement>
+      <CampaignElement Id="25" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="ContactList" Category="TargetAudience" Name="preflight (prod)" Position="330,10" SharedCheckout="False">
+        <Filter CriteriaJoinOperator="|">
+          <Criteria Row="1" Field="seedlevel" Operator="Equal" Value="2" />
+        </Filter>
+        <HookedEvents TriggerFireContext="Current Visit" />
+      </CampaignElement>
+      <CampaignElement Id="26" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="ContactList" Category="TargetAudience" Name="client seeds" Position="480,10" SharedCheckout="False">
+        <Filter CriteriaJoinOperator="&amp;">
+          <Criteria Row="1" Field="seedlevel" Operator="Equal" Value="3" />
+        </Filter>
+        <HookedEvents TriggerFireContext="Current Visit" />
+      </CampaignElement>
+      <CampaignElement Id="31" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="Email" Category="Outbound" Name="Search Email 1" Position="30,140" SharedCheckout="False">
+        <Events>
+          <Event EventId="20104" GoalId="8" IsDistinct="False" />
+        </Events>
+        <Properties>
+          <Messages>
+            <Message Id="1">
+              <ToAddress>##email##</ToAddress>
+              <FromName>Jancy Scott</FromName>
+              <FromAddress>jancy.scott@oc.edu</FromAddress>
+              <ReplyTo>admissions@oc.edu</ReplyTo>
+              <Subject>Make a difference and live your passion ##subjectlineaddendum##</Subject>
+              <HtmlContent>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+	&lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type" /&gt;
+	&lt;meta content="width=device-width, initial-scale=1.0" name="viewport" /&gt;
+	&lt;style type="text/css"&gt;
+		body {width:100% !important; -webkit-text-size-adjust:none; -ms-text-size-adjust:100%; margin:0; padding:0;}
+		img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic; border:none;}
+		a img {border:none;}
+		table {mso-table-lspace:0pt; mso-table-rspace:0pt;}
+		table, td, .no-contextual-highlighting p span, a, p, span {font-family:arial !important; border-bottom:0; padding:0; margin:0;}
+		.no-contextual-highlighting {border-bottom:none !important; text-decoration: none;}
+		.mobile-info {display:none !important;}
+		.wide-info {display:block !important; display:table !important;}
+    table#link {width:70% !important;}
+					
+		@media only screen and (max-device-width: 736px) {
+			a[href^="tel"], a[href^="sms"] {
+				text-decoration: none;
+				pointer-events: none;
+				cursor: default;}
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+				text-decoration: default;
+				pointer-events: auto;
+				cursor: default;}
+			.wide-info {display:none !important;}
+			.mobile-info {display:table !important;}
+      table#link {width:100% !important;}
+		}
+					
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+			a[href^="tel"], a[href^="sms"] {
+				text-decoration: none;
+				pointer-events: none;
+				cursor: default;}
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+				text-decoration: default;
+				pointer-events: auto;
+				cursor: default;} 
+		}
+					
+		@media only screen and (device-pixel-ratio: 2) {
+			/* Put your iPhone styles in here */
+
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;center&gt;
+  &lt;!--[if gte mso 9|(IE)]&gt;
+		&lt;style&gt;
+			
+		&lt;/style&gt;
+		&lt;table width="610"&gt;&lt;tr&gt;&lt;td&gt;
+		&lt;![endif]--&gt;&lt;!--[if mso 16]&gt;
+		&lt;style&gt;
+			
+		&lt;/style&gt;
+	&lt;![endif]--&gt;
+  &lt;div style="max-width: 610px; width: 100%"&gt;
+    &lt;img alt="img-banner" src="http://s3.amazonaws.com/ocu/assets/img/search1.JPG" style="max-width:610px; width:100%" width="610" /&gt;
+
+    &lt;table border="0" cellpadding="0" cellspacing="0" style="max-width:610px; width:100%" width="610"&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td align="center" width="610" style="padding-left:15px; padding-right:15px;"&gt;
+						&lt;p style="text-align:left; line-height:16pt; margin:0; padding:0;"&gt;
+							&lt;span&gt;
+								&lt;br/&gt;
+								##firstname##, Oklahoma Christian is home to the scholar, the seeker, and the servant. As a student at OC, you will live in a community of faith. You will make a difference as you live out your passion 
+                wherever God leads you.&lt;br/&gt;
+                &lt;br/&gt;
+                Here, we Live Jesus Loud every day. So, how will you put your fingerprint on the world? Start by visiting your personal site to tell us more about what's important to you.
+							&lt;/span&gt;
+            &lt;/p&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;center&gt;
+              &lt;table id="link" style="width:100%;" bgcolor="#5EC1B3"&gt;
+                &lt;tr&gt;
+                  &lt;td style="padding:15px 0;" align="center"&gt;
+                    &lt;a style="font-size:16pt; color:black;" href=""&gt;&lt;b&gt;##purl##.weRHOME.oc.edu&lt;/b&gt;&lt;/a&gt;
+                  &lt;/td&gt;
+                &lt;/tr&gt;
+              &lt;/table&gt;
+            &lt;/center&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table class="mobile-info" border="0" cellpadding="0" cellspacing="0" width="610" bgcolor="#393738" style="padding:6px 0; max-width:610px; width:100%; display:table;"&gt;
+			&lt;tbody&gt;
+				&lt;tr&gt;
+					&lt;td align="center" colspan="2"&gt;
+						&lt;img src="http://s3.amazonaws.com/ocu/assets/img/footer-logo.jpg" alt="OCU Logo" style="width:85%;" /&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;td align="center" class="no-contextual-highlighting" style="font-size:0.8em;"&gt;
+						&lt;a href="#" style="color:#502e2e; text-decoration:none;"&gt;
+							&lt;span style="color:#ffffff;"&gt;www.oc.edu&lt;br/&gt;800-877-5010&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+					&lt;td align="center" class="no-contextual-highlighting" style="font-size:0.8em; border-left:solid 1px white;"&gt;
+						&lt;a href="#" style="text-decoration:none; color:#ffffff;"&gt;
+							&lt;span style="color:#ffffff;"&gt;2501 E. Memorial Road&lt;br/&gt;Oklahoma City, OK&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table class="wide-info" border="0" cellpadding="0" cellspacing="0" width="610" bgcolor="#393738" style="max-width:610px; width:100%; display:none;"&gt;
+			&lt;tbody&gt;
+				&lt;tr&gt;
+					&lt;td class="no-contextual-highlighting" align="center" style="width:45%; padding:15px 0;" width="275"&gt;
+						&lt;img src="http://s3.amazonaws.com/ocu/assets/img/footer-logo.jpeg" alt="OCU Logo" style="width:85%;" width="220" /&gt;
+					&lt;/td&gt;
+					&lt;td align="center" class="no-contextual-highlighting info" style="width:25%; padding:15px 0; font-size:0.8em;" width="160"&gt;
+						&lt;a href="#" style="color:#ffffff; text-decoration:none;"&gt;
+							&lt;span style="color:#ffffff;"&gt;www.oc.edu&lt;br/&gt;800-877-5010&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+					
+					&lt;td align="center" class="no-contextual-highlighting info" style="width:30%; padding:15px 0; font-size:0.8em;" width="175"&gt;
+						&lt;div style="border-left:solid 1px #ffffff;"&gt;
+							&lt;p style="text-align:left; margin-left:6px; margin-right:6px;"&gt;
+								&lt;a href="#" style="text-decoration:none; color:#ffffff;"&gt;
+									&lt;span style="color:#ffffff;"&gt;2501 E. Memorial Road&lt;br/&gt;Oklahoma City, OK&lt;/span&gt;
+								&lt;/a&gt;
+							&lt;/p&gt;
+						&lt;/div&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table border="0" cellpadding="0" cellspacing="0" style="max-width:610px; width:100%" width="610"&gt;
+			&lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td class="no-contextual-highlighting" align="center" style="padding:12px;"&gt;
+          	&lt;p style="font-size:8pt; line-height:8pt;"&gt;
+              &lt;span style="color:black;"&gt;This message is being sent to ##firstname## ##lastname## at ##email##. If you are not ##firstname## ##lastname## or no longer wish to receive messages of this nature, please &lt;a style="color:blue;" href="##Unsubscribe RedirectURL="https://s3-us-west-1.amazonaws.com/rsrc.enrollmentfuel.com/unsubscribed.htm" ##"&gt;Unsubscribe&lt;/a&gt;&lt;/span&gt;
+          	&lt;/p&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+  &lt;!--[if mso]&gt;
+		&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+	&lt;![endif]--&gt;
+	&lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;</HtmlContent>
+              <TextContent>##firstname##,
+Oklahoma Christian is home to the scholar, the seeker, and the servant. As a student at OC, you will live in a community of faith. You will make a difference as you live out your passion wherever God leads you.
+
+Here, we Live Jesus Loud every day. So, how will you put your fingerprint on the world? Start by visiting your personal site to tell us more about what's important to you.
+
+http://werhome.oc.edu/##purl##
+
+Oklahoma Christian University
+2501 E. Memorial Road
+Oklahoma City, OK 73136
+ph. 800-877-5010
+
+This message is being sent to ##firstname## ##lastname## at ##email##. If you are not ##firstname## ##lastname## or no longer wish to receive messages of this nature, please Unsubscribe at:
+##Unsubscribe RedirectURL="https://s3-us-west-1.amazonaws.com/rsrc.enrollmentfuel.com/unsubscribed.htm" ##
+
+
+</TextContent>
+            </Message>
+          </Messages>
+        </Properties>
+      </CampaignElement>
+      <CampaignElement Id="32" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="Email" Category="Outbound" Name="Search Email 5" Position="630,140" SharedCheckout="False">
+        <Events>
+          <Event EventId="20104" GoalId="8" IsDistinct="False" />
+        </Events>
+        <Properties>
+          <Messages>
+            <Message Id="1">
+              <ToAddress>##email##</ToAddress>
+              <FromName>Jancy Scott</FromName>
+              <FromAddress>jancy.scott@oc.edu</FromAddress>
+              <ReplyTo>admissions@oc.edu</ReplyTo>
+              <Subject>What’s important to you, ##firstname##? ##subjectlineaddendum##</Subject>
+              <HtmlContent>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+	&lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type" /&gt;
+	&lt;meta content="width=device-width, initial-scale=1.0" name="viewport" /&gt;
+	&lt;style type="text/css"&gt;
+		body {width:100% !important; -webkit-text-size-adjust:none; -ms-text-size-adjust:100%; margin:0; padding:0;}
+		img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic; border:none;}
+		a img {border:none;}
+		table {mso-table-lspace:0pt; mso-table-rspace:0pt;}
+		table, td, .no-contextual-highlighting p span, a, p, span {font-family:arial !important; border-bottom:0; padding:0; margin:0;}
+		.no-contextual-highlighting {border-bottom:none !important; text-decoration: none;}
+		.mobile-info {display:none !important;}
+		.wide-info {display:block !important; display:table !important;}
+    table#link {width:70% !important;}
+					
+		@media only screen and (max-device-width: 736px) {
+			a[href^="tel"], a[href^="sms"] {
+				text-decoration: none;
+				pointer-events: none;
+				cursor: default;}
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+				text-decoration: default;
+				pointer-events: auto;
+				cursor: default;}
+			.wide-info {display:none !important;}
+			.mobile-info {display:table !important;}
+      table#link {width:100% !important;}
+		}
+					
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+			a[href^="tel"], a[href^="sms"] {
+				text-decoration: none;
+				pointer-events: none;
+				cursor: default;}
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+				text-decoration: default;
+				pointer-events: auto;
+				cursor: default;} 
+		}
+					
+		@media only screen and (device-pixel-ratio: 2) {
+			/* Put your iPhone styles in here */
+
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;center&gt;
+  &lt;!--[if gte mso 9|(IE)]&gt;
+		&lt;style&gt;
+			
+		&lt;/style&gt;
+		&lt;table width="610"&gt;&lt;tr&gt;&lt;td&gt;
+		&lt;![endif]--&gt;&lt;!--[if mso 16]&gt;
+		&lt;style&gt;
+			
+		&lt;/style&gt;
+	&lt;![endif]--&gt;
+  &lt;div style="max-width: 610px; width: 100%"&gt;
+    &lt;img alt="img-banner" src="http://s3.amazonaws.com/ocu/assets/img/search1.JPG" style="max-width:610px; width:100%" width="610" /&gt;
+
+    &lt;table border="0" cellpadding="0" cellspacing="0" style="max-width:610px; width:100%" width="610"&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td align="center" width="610" style="padding-left:15px; padding-right:15px;"&gt;
+						&lt;p style="text-align:left; line-height:16pt; margin:0; padding:0;"&gt;
+							&lt;span&gt;
+								&lt;br/&gt;
+								##firstname##, Oklahoma Christian is home to the scholar, the seeker, and the servant. As a student at OC, you will live in a community of faith. You will make a difference as you live out your passion 
+                wherever God leads you.&lt;br/&gt;
+                &lt;br/&gt;
+                Here, we Live Jesus Loud every day. So, how will you put your fingerprint on the world? Start by visiting your personal site to tell us more about what's important to you.
+							&lt;/span&gt;
+            &lt;/p&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;center&gt;
+              &lt;table id="link" style="width:100%;" bgcolor="#5EC1B3"&gt;
+                &lt;tr&gt;
+                  &lt;td style="padding:15px 0;" align="center"&gt;
+                    &lt;a style="font-size:16pt; color:black;" href=""&gt;&lt;b&gt;##purl##.weRHOME.oc.edu&lt;/b&gt;&lt;/a&gt;
+                  &lt;/td&gt;
+                &lt;/tr&gt;
+              &lt;/table&gt;
+            &lt;/center&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table class="mobile-info" border="0" cellpadding="0" cellspacing="0" width="610" bgcolor="#393738" style="padding:6px 0; max-width:610px; width:100%; display:table;"&gt;
+			&lt;tbody&gt;
+				&lt;tr&gt;
+					&lt;td align="center" colspan="2"&gt;
+						&lt;img src="http://s3.amazonaws.com/ocu/assets/img/footer-logo.jpg" alt="OCU Logo" style="width:85%;" /&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;td align="center" class="no-contextual-highlighting" style="font-size:0.8em;"&gt;
+						&lt;a href="#" style="color:#502e2e; text-decoration:none;"&gt;
+							&lt;span style="color:#ffffff;"&gt;www.oc.edu&lt;br/&gt;800-877-5010&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+					&lt;td align="center" class="no-contextual-highlighting" style="font-size:0.8em; border-left:solid 1px white;"&gt;
+						&lt;a href="#" style="text-decoration:none; color:#ffffff;"&gt;
+							&lt;span style="color:#ffffff;"&gt;2501 E. Memorial Road&lt;br/&gt;Oklahoma City, OK&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table class="wide-info" border="0" cellpadding="0" cellspacing="0" width="610" bgcolor="#393738" style="max-width:610px; width:100%; display:none;"&gt;
+			&lt;tbody&gt;
+				&lt;tr&gt;
+					&lt;td class="no-contextual-highlighting" align="center" style="width:45%; padding:15px 0;" width="275"&gt;
+						&lt;img src="http://s3.amazonaws.com/ocu/assets/img/footer-logo.jpeg" alt="OCU Logo" style="width:85%;" width="220" /&gt;
+					&lt;/td&gt;
+					&lt;td align="center" class="no-contextual-highlighting info" style="width:25%; padding:15px 0; font-size:0.8em;" width="160"&gt;
+						&lt;a href="#" style="color:#ffffff; text-decoration:none;"&gt;
+							&lt;span style="color:#ffffff;"&gt;www.oc.edu&lt;br/&gt;800-877-5010&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+					
+					&lt;td align="center" class="no-contextual-highlighting info" style="width:30%; padding:15px 0; font-size:0.8em;" width="175"&gt;
+						&lt;div style="border-left:solid 1px #ffffff;"&gt;
+							&lt;p style="text-align:left; margin-left:6px; margin-right:6px;"&gt;
+								&lt;a href="#" style="text-decoration:none; color:#ffffff;"&gt;
+									&lt;span style="color:#ffffff;"&gt;2501 E. Memorial Road&lt;br/&gt;Oklahoma City, OK&lt;/span&gt;
+								&lt;/a&gt;
+							&lt;/p&gt;
+						&lt;/div&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table border="0" cellpadding="0" cellspacing="0" style="max-width:610px; width:100%" width="610"&gt;
+			&lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td class="no-contextual-highlighting" align="center" style="padding:12px;"&gt;
+          	&lt;p style="font-size:8pt; line-height:8pt;"&gt;
+              &lt;span style="color:black;"&gt;This message is being sent to ##firstname## ##lastname## at ##email##. If you are not ##firstname## ##lastname## or no longer wish to receive messages of this nature, please &lt;a style="color:blue;" href="##Unsubscribe RedirectURL="https://s3-us-west-1.amazonaws.com/rsrc.enrollmentfuel.com/unsubscribed.htm" ##"&gt;Unsubscribe&lt;/a&gt;&lt;/span&gt;
+          	&lt;/p&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+  &lt;!--[if mso]&gt;
+		&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+	&lt;![endif]--&gt;
+	&lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;</HtmlContent>
+              <TextContent>##firstname##,
+Oklahoma Christian is home to the scholar, the seeker, and the servant. As a student at OC, you will live in a community of faith. You will make a difference as you live out your passion wherever God leads you.
+
+Here, we Live Jesus Loud every day. So, how will you put your fingerprint on the world? Start by visiting your personal site to tell us more about what's important to you.
+
+http://werhome.oc.edu/##purl##
+
+Oklahoma Christian University
+2501 E. Memorial Road
+Oklahoma City, OK 73136
+ph. 800-877-5010
+
+This message is being sent to ##firstname## ##lastname## at ##email##. If you are not ##firstname## ##lastname## or no longer wish to receive messages of this nature, please Unsubscribe at:
+##Unsubscribe RedirectURL="https://s3-us-west-1.amazonaws.com/rsrc.enrollmentfuel.com/unsubscribed.htm" ##
+
+
+</TextContent>
+            </Message>
+          </Messages>
+        </Properties>
+      </CampaignElement>
+      <CampaignElement Id="33" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="Email" Category="Outbound" Name="Search Email 2" Position="180,140" SharedCheckout="False">
+        <Events>
+          <Event EventId="20104" GoalId="8" IsDistinct="False" />
+        </Events>
+        <Properties>
+          <Messages>
+            <Message Id="1">
+              <ToAddress>##email##</ToAddress>
+              <FromName>Jancy Scott</FromName>
+              <FromAddress>jancy.scott@oc.edu</FromAddress>
+              <ReplyTo>admissions@oc.edu</ReplyTo>
+              <Subject>Tell us your story, ##firstname## ##subjectlineaddendum##</Subject>
+              <HtmlContent>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+	&lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type" /&gt;
+	&lt;meta content="width=device-width, initial-scale=1.0" name="viewport" /&gt;
+	&lt;style type="text/css"&gt;
+		body {width:100% !important; -webkit-text-size-adjust:none; -ms-text-size-adjust:100%; margin:0; padding:0;}
+		img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic; border:none;}
+		a img {border:none;}
+		table {mso-table-lspace:0pt; mso-table-rspace:0pt;}
+		table, td, .no-contextual-highlighting p span, a, p, span {font-family:arial !important; border-bottom:0; padding:0; margin:0;}
+		.no-contextual-highlighting {border-bottom:none !important; text-decoration: none;}
+		.mobile-info {display:none !important;}
+		.wide-info {display:block !important; display:table !important;}
+    table#link {width:70% !important;}
+					
+		@media only screen and (max-device-width: 736px) {
+			a[href^="tel"], a[href^="sms"] {
+				text-decoration: none;
+				pointer-events: none;
+				cursor: default;}
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+				text-decoration: default;
+				pointer-events: auto;
+				cursor: default;}
+			.wide-info {display:none !important;}
+			.mobile-info {display:table !important;}
+      table#link {width:100% !important;}
+		}
+					
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+			a[href^="tel"], a[href^="sms"] {
+				text-decoration: none;
+				pointer-events: none;
+				cursor: default;}
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+				text-decoration: default;
+				pointer-events: auto;
+				cursor: default;} 
+		}
+					
+		@media only screen and (device-pixel-ratio: 2) {
+			/* Put your iPhone styles in here */
+
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;center&gt;
+  &lt;!--[if gte mso 9|(IE)]&gt;
+		&lt;style&gt;
+			
+		&lt;/style&gt;
+		&lt;table width="610"&gt;&lt;tr&gt;&lt;td&gt;
+		&lt;![endif]--&gt;&lt;!--[if mso 16]&gt;
+		&lt;style&gt;
+			
+		&lt;/style&gt;
+	&lt;![endif]--&gt;
+  &lt;div style="max-width: 610px; width: 100%"&gt;
+    &lt;img alt="img-banner" src="http://s3.amazonaws.com/ocu/assets/img/search2.JPG" style="max-width:610px; width:100%" width="610" /&gt;
+
+    &lt;table border="0" cellpadding="0" cellspacing="0" style="max-width:610px; width:100%" width="610"&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td align="center" width="610" style="padding-left:15px; padding-right:15px;"&gt;
+						&lt;p style="text-align:left; line-height:16pt; margin:0; padding:0;"&gt;
+							&lt;span&gt;
+								&lt;br/&gt;
+                &lt;b style="font-size:14pt;"&gt;Hi ##firstname##!&lt;/b&gt;&lt;br/&gt;
+                &lt;br/&gt;
+                The community of Oklahoma Christian is comprised of smart, kind, and diverse students, faculty, and staff&amp;mdash;each with their own story to tell. The Humans of OC call our campus home because home is 
+                where you learn, grow, connect, and prepare for the future.&lt;br/&gt;
+                &lt;br/&gt;
+                We want to welcome you home&amp;mdash;become a Human of OC, and put your fingerprint on the world. Visit your personal site to get started today.
+							&lt;/span&gt;
+            &lt;/p&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;center&gt;
+              &lt;table id="link" style="width:100%;" bgcolor="#5EC1B3"&gt;
+                &lt;tr&gt;
+                  &lt;td style="padding:15px 0;" align="center"&gt;
+                    &lt;a style="font-size:16pt; color:black;" href=""&gt;&lt;b&gt;##purl##.weRHOME.oc.edu&lt;/b&gt;&lt;/a&gt;
+                  &lt;/td&gt;
+                &lt;/tr&gt;
+              &lt;/table&gt;
+            &lt;/center&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table class="mobile-info" border="0" cellpadding="0" cellspacing="0" width="610" bgcolor="#393738" style="padding:6px 0; max-width:610px; width:100%; display:table;"&gt;
+			&lt;tbody&gt;
+				&lt;tr&gt;
+					&lt;td align="center" colspan="2"&gt;
+						&lt;img src="http://s3.amazonaws.com/ocu/assets/img/footer-logo.jpg" alt="OCU Logo" style="width:85%;" /&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;td align="center" class="no-contextual-highlighting" style="font-size:0.8em;"&gt;
+						&lt;a href="#" style="color:#502e2e; text-decoration:none;"&gt;
+							&lt;span style="color:#ffffff;"&gt;www.oc.edu&lt;br/&gt;800-877-5010&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+					&lt;td align="center" class="no-contextual-highlighting" style="font-size:0.8em; border-left:solid 1px white;"&gt;
+						&lt;a href="#" style="text-decoration:none; color:#ffffff;"&gt;
+							&lt;span style="color:#ffffff;"&gt;2501 E. Memorial Road&lt;br/&gt;Oklahoma City, OK&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table class="wide-info" border="0" cellpadding="0" cellspacing="0" width="610" bgcolor="#393738" style="max-width:610px; width:100%; display:none;"&gt;
+			&lt;tbody&gt;
+				&lt;tr&gt;
+					&lt;td class="no-contextual-highlighting" align="center" style="width:45%; padding:15px 0;" width="275"&gt;
+						&lt;img src="http://s3.amazonaws.com/ocu/assets/img/footer-logo.jpeg" alt="OCU Logo" style="width:85%;" width="220" /&gt;
+					&lt;/td&gt;
+					&lt;td align="center" class="no-contextual-highlighting info" style="width:25%; padding:15px 0; font-size:0.8em;" width="160"&gt;
+						&lt;a href="#" style="color:#ffffff; text-decoration:none;"&gt;
+							&lt;span style="color:#ffffff;"&gt;www.oc.edu&lt;br/&gt;800-877-5010&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+					
+					&lt;td align="center" class="no-contextual-highlighting info" style="width:30%; padding:15px 0; font-size:0.8em;" width="175"&gt;
+						&lt;div style="border-left:solid 1px #ffffff;"&gt;
+							&lt;p style="text-align:left; margin-left:6px; margin-right:6px;"&gt;
+								&lt;a href="#" style="text-decoration:none; color:#ffffff;"&gt;
+									&lt;span style="color:#ffffff;"&gt;2501 E. Memorial Road&lt;br/&gt;Oklahoma City, OK&lt;/span&gt;
+								&lt;/a&gt;
+							&lt;/p&gt;
+						&lt;/div&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table border="0" cellpadding="0" cellspacing="0" style="max-width:610px; width:100%" width="610"&gt;
+			&lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td class="no-contextual-highlighting" align="center" style="padding:12px;"&gt;
+          	&lt;p style="font-size:8pt; line-height:8pt;"&gt;
+              &lt;span style="color:black;"&gt;This message is being sent to ##firstname## ##lastname## at ##email##. If you are not ##firstname## ##lastname## or no longer wish to receive messages of this nature, please &lt;a style="color:blue;" href="##Unsubscribe RedirectURL="https://s3-us-west-1.amazonaws.com/rsrc.enrollmentfuel.com/unsubscribed.htm" ##"&gt;Unsubscribe&lt;/a&gt;&lt;/span&gt;
+          	&lt;/p&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+  &lt;!--[if mso]&gt;
+		&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+	&lt;![endif]--&gt;
+	&lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;</HtmlContent>
+              <TextContent>Hi ##firstname##!
+The community of Oklahoma Christian is comprised of smart, kind, and diverse students, faculty, and staff—each with their own story to tell. The Humans of OC call our campus home because home is where you learn, grow, connect, and prepare for the future.
+
+We want to welcome you home—become a Human of OC, and put your fingerprint on the world. Visit your personal site to get started today.
+
+http://werhome.oc.edu/##purl##
+
+Oklahoma Christian University
+2501 E. Memorial Road
+Oklahoma City, OK 73136
+ph. 800-877-5010
+
+This message is being sent to ##firstname## ##lastname## at ##email##. If you are not ##firstname## ##lastname## or no longer wish to receive messages of this nature, please Unsubscribe at:
+##Unsubscribe RedirectURL="https://s3-us-west-1.amazonaws.com/rsrc.enrollmentfuel.com/unsubscribed.htm" ##
+
+
+</TextContent>
+            </Message>
+          </Messages>
+        </Properties>
+      </CampaignElement>
+      <CampaignElement Id="34" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="Email" Category="Outbound" Name="Search Email 6" Position="780,140" SharedCheckout="False">
+        <Events>
+          <Event EventId="20104" GoalId="8" IsDistinct="False" />
+        </Events>
+        <Properties>
+          <Messages>
+            <Message Id="1">
+              <ToAddress>##email##</ToAddress>
+              <FromName>Jancy Scott</FromName>
+              <FromAddress>jancy.scott@oc.edu</FromAddress>
+              <ReplyTo>admissions@oc.edu</ReplyTo>
+              <Subject>This is why we call OC home ##subjectlineaddendum##</Subject>
+              <HtmlContent>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+	&lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type" /&gt;
+	&lt;meta content="width=device-width, initial-scale=1.0" name="viewport" /&gt;
+	&lt;style type="text/css"&gt;
+		body {width:100% !important; -webkit-text-size-adjust:none; -ms-text-size-adjust:100%; margin:0; padding:0;}
+		img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic; border:none;}
+		a img {border:none;}
+		table {mso-table-lspace:0pt; mso-table-rspace:0pt;}
+		table, td, .no-contextual-highlighting p span, a, p, span {font-family:arial !important; border-bottom:0; padding:0; margin:0;}
+		.no-contextual-highlighting {border-bottom:none !important; text-decoration: none;}
+		.mobile-info {display:none !important;}
+		.wide-info {display:block !important; display:table !important;}
+    table#link {width:70% !important;}
+					
+		@media only screen and (max-device-width: 736px) {
+			a[href^="tel"], a[href^="sms"] {
+				text-decoration: none;
+				pointer-events: none;
+				cursor: default;}
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+				text-decoration: default;
+				pointer-events: auto;
+				cursor: default;}
+			.wide-info {display:none !important;}
+			.mobile-info {display:table !important;}
+      table#link {width:100% !important;}
+		}
+					
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+			a[href^="tel"], a[href^="sms"] {
+				text-decoration: none;
+				pointer-events: none;
+				cursor: default;}
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+				text-decoration: default;
+				pointer-events: auto;
+				cursor: default;} 
+		}
+					
+		@media only screen and (device-pixel-ratio: 2) {
+			/* Put your iPhone styles in here */
+
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;center&gt;
+  &lt;!--[if gte mso 9|(IE)]&gt;
+		&lt;style&gt;
+			
+		&lt;/style&gt;
+		&lt;table width="610"&gt;&lt;tr&gt;&lt;td&gt;
+		&lt;![endif]--&gt;&lt;!--[if mso 16]&gt;
+		&lt;style&gt;
+			
+		&lt;/style&gt;
+	&lt;![endif]--&gt;
+  &lt;div style="max-width: 610px; width: 100%"&gt;
+    &lt;img alt="img-banner" src="http://s3.amazonaws.com/ocu/assets/img/search2.JPG" style="max-width:610px; width:100%" width="610" /&gt;
+
+    &lt;table border="0" cellpadding="0" cellspacing="0" style="max-width:610px; width:100%" width="610"&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td align="center" width="610" style="padding-left:15px; padding-right:15px;"&gt;
+						&lt;p style="text-align:left; line-height:16pt; margin:0; padding:0;"&gt;
+							&lt;span&gt;
+								&lt;br/&gt;
+                &lt;b style="font-size:14pt;"&gt;Hi ##firstname##!&lt;/b&gt;&lt;br/&gt;
+                &lt;br/&gt;
+                The community of Oklahoma Christian is comprised of smart, kind, and diverse students, faculty, and staff&amp;mdash;each with their own story to tell. The Humans of OC call our campus home because home is 
+                where you learn, grow, connect, and prepare for the future.&lt;br/&gt;
+                &lt;br/&gt;
+                We want to welcome you home&amp;mdash;become a Human of OC, and put your fingerprint on the world. Visit your personal site to get started today.
+							&lt;/span&gt;
+            &lt;/p&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;center&gt;
+              &lt;table id="link" style="width:100%;" bgcolor="#5EC1B3"&gt;
+                &lt;tr&gt;
+                  &lt;td style="padding:15px 0;" align="center"&gt;
+                    &lt;a style="font-size:16pt; color:black;" href=""&gt;&lt;b&gt;##purl##.weRHOME.oc.edu&lt;/b&gt;&lt;/a&gt;
+                  &lt;/td&gt;
+                &lt;/tr&gt;
+              &lt;/table&gt;
+            &lt;/center&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table class="mobile-info" border="0" cellpadding="0" cellspacing="0" width="610" bgcolor="#393738" style="padding:6px 0; max-width:610px; width:100%; display:table;"&gt;
+			&lt;tbody&gt;
+				&lt;tr&gt;
+					&lt;td align="center" colspan="2"&gt;
+						&lt;img src="http://s3.amazonaws.com/ocu/assets/img/footer-logo.jpg" alt="OCU Logo" style="width:85%;" /&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;td align="center" class="no-contextual-highlighting" style="font-size:0.8em;"&gt;
+						&lt;a href="#" style="color:#502e2e; text-decoration:none;"&gt;
+							&lt;span style="color:#ffffff;"&gt;www.oc.edu&lt;br/&gt;800-877-5010&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+					&lt;td align="center" class="no-contextual-highlighting" style="font-size:0.8em; border-left:solid 1px white;"&gt;
+						&lt;a href="#" style="text-decoration:none; color:#ffffff;"&gt;
+							&lt;span style="color:#ffffff;"&gt;2501 E. Memorial Road&lt;br/&gt;Oklahoma City, OK&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table class="wide-info" border="0" cellpadding="0" cellspacing="0" width="610" bgcolor="#393738" style="max-width:610px; width:100%; display:none;"&gt;
+			&lt;tbody&gt;
+				&lt;tr&gt;
+					&lt;td class="no-contextual-highlighting" align="center" style="width:45%; padding:15px 0;" width="275"&gt;
+						&lt;img src="http://s3.amazonaws.com/ocu/assets/img/footer-logo.jpeg" alt="OCU Logo" style="width:85%;" width="220" /&gt;
+					&lt;/td&gt;
+					&lt;td align="center" class="no-contextual-highlighting info" style="width:25%; padding:15px 0; font-size:0.8em;" width="160"&gt;
+						&lt;a href="#" style="color:#ffffff; text-decoration:none;"&gt;
+							&lt;span style="color:#ffffff;"&gt;www.oc.edu&lt;br/&gt;800-877-5010&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+					
+					&lt;td align="center" class="no-contextual-highlighting info" style="width:30%; padding:15px 0; font-size:0.8em;" width="175"&gt;
+						&lt;div style="border-left:solid 1px #ffffff;"&gt;
+							&lt;p style="text-align:left; margin-left:6px; margin-right:6px;"&gt;
+								&lt;a href="#" style="text-decoration:none; color:#ffffff;"&gt;
+									&lt;span style="color:#ffffff;"&gt;2501 E. Memorial Road&lt;br/&gt;Oklahoma City, OK&lt;/span&gt;
+								&lt;/a&gt;
+							&lt;/p&gt;
+						&lt;/div&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table border="0" cellpadding="0" cellspacing="0" style="max-width:610px; width:100%" width="610"&gt;
+			&lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td class="no-contextual-highlighting" align="center" style="padding:12px;"&gt;
+          	&lt;p style="font-size:8pt; line-height:8pt;"&gt;
+              &lt;span style="color:black;"&gt;This message is being sent to ##firstname## ##lastname## at ##email##. If you are not ##firstname## ##lastname## or no longer wish to receive messages of this nature, please &lt;a style="color:blue;" href="##Unsubscribe RedirectURL="https://s3-us-west-1.amazonaws.com/rsrc.enrollmentfuel.com/unsubscribed.htm" ##"&gt;Unsubscribe&lt;/a&gt;&lt;/span&gt;
+          	&lt;/p&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+  &lt;!--[if mso]&gt;
+		&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+	&lt;![endif]--&gt;
+	&lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;</HtmlContent>
+              <TextContent>Hi ##firstname##!
+The community of Oklahoma Christian is comprised of smart, kind, and diverse students, faculty, and staff—each with their own story to tell. The Humans of OC call our campus home because home is where you learn, grow, connect, and prepare for the future.
+
+We want to welcome you home—become a Human of OC, and put your fingerprint on the world. Visit your personal site to get started today.
+
+http://werhome.oc.edu/##purl##
+
+Oklahoma Christian University
+2501 E. Memorial Road
+Oklahoma City, OK 73136
+ph. 800-877-5010
+
+This message is being sent to ##firstname## ##lastname## at ##email##. If you are not ##firstname## ##lastname## or no longer wish to receive messages of this nature, please Unsubscribe at:
+##Unsubscribe RedirectURL="https://s3-us-west-1.amazonaws.com/rsrc.enrollmentfuel.com/unsubscribed.htm" ##
+
+
+</TextContent>
+            </Message>
+          </Messages>
+        </Properties>
+      </CampaignElement>
+      <CampaignElement Id="35" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="Email" Category="Outbound" Name="Search Email 3" Position="330,140" SharedCheckout="False">
+        <Events>
+          <Event EventId="20104" GoalId="8" IsDistinct="False" />
+        </Events>
+        <Properties>
+          <Messages>
+            <Message Id="1">
+              <ToAddress>##email##</ToAddress>
+              <FromName>Jancy Scott</FromName>
+              <FromAddress>jancy.scott@oc.edu</FromAddress>
+              <ReplyTo>admissions@oc.edu</ReplyTo>
+              <Subject>Join our nest, ##firstname## ##subjectlineaddendum##</Subject>
+              <HtmlContent>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+	&lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type" /&gt;
+	&lt;meta content="width=device-width, initial-scale=1.0" name="viewport" /&gt;
+	&lt;style type="text/css"&gt;
+		body {width:100% !important; -webkit-text-size-adjust:none; -ms-text-size-adjust:100%; margin:0; padding:0;}
+		img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic; border:none;}
+		a img {border:none;}
+		table {mso-table-lspace:0pt; mso-table-rspace:0pt;}
+		table, td, .no-contextual-highlighting p span, a, p, span {font-family:arial !important; border-bottom:0; padding:0; margin:0;}
+		.no-contextual-highlighting {border-bottom:none !important; text-decoration: none;}
+		.mobile-info {display:none !important;}
+		.wide-info {display:block !important; display:table !important;}
+    table#link {width:70% !important;}
+					
+		@media only screen and (max-device-width: 736px) {
+			a[href^="tel"], a[href^="sms"] {
+				text-decoration: none;
+				pointer-events: none;
+				cursor: default;}
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+				text-decoration: default;
+				pointer-events: auto;
+				cursor: default;}
+			.wide-info {display:none !important;}
+			.mobile-info {display:table !important;}
+      table#link {width:100% !important;}
+		}
+					
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+			a[href^="tel"], a[href^="sms"] {
+				text-decoration: none;
+				pointer-events: none;
+				cursor: default;}
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+				text-decoration: default;
+				pointer-events: auto;
+				cursor: default;} 
+		}
+					
+		@media only screen and (device-pixel-ratio: 2) {
+			/* Put your iPhone styles in here */
+
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;center&gt;
+  &lt;!--[if gte mso 9|(IE)]&gt;
+		&lt;style&gt;
+			
+		&lt;/style&gt;
+		&lt;table width="610"&gt;&lt;tr&gt;&lt;td&gt;
+		&lt;![endif]--&gt;&lt;!--[if mso 16]&gt;
+		&lt;style&gt;
+			
+		&lt;/style&gt;
+	&lt;![endif]--&gt;
+  &lt;div style="max-width: 610px; width: 100%"&gt;
+    &lt;img alt="img-banner" src="http://s3.amazonaws.com/ocu/assets/img/search3.JPG" style="max-width:610px; width:100%" width="610" /&gt;
+
+    &lt;table border="0" cellpadding="0" cellspacing="0" style="max-width:610px; width:100%" width="610"&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td align="center" width="610" style="padding-left:15px; padding-right:15px;"&gt;
+						&lt;p style="text-align:left; line-height:16pt; margin:0; padding:0;"&gt;
+							&lt;span&gt;
+								&lt;br/&gt;
+                &lt;b style="font-size:14pt;"&gt;Hey ##firstname##,&lt;/b&gt;&lt;br/&gt;
+                &lt;br/&gt;
+                OC offers an unparalleled urban, Christian education. Located just 10 minutes from downtown Oklahoma City, you'll have access to jobs, internships, and big city entertainment, while engaging in a 
+                focused, Christian-based education.&lt;br/&gt;
+                &lt;br/&gt;
+                Join our nest, and visit your personal site to start the journey toward becoming an Eagle.
+							&lt;/span&gt;
+            &lt;/p&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;center&gt;
+              &lt;table id="link" style="width:100%;" bgcolor="#5EC1B3"&gt;
+                &lt;tr&gt;
+                  &lt;td style="padding:15px 0;" align="center"&gt;
+                    &lt;a style="font-size:16pt; color:black;" href=""&gt;&lt;b&gt;##purl##.weRHOME.oc.edu&lt;/b&gt;&lt;/a&gt;
+                  &lt;/td&gt;
+                &lt;/tr&gt;
+              &lt;/table&gt;
+            &lt;/center&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table class="mobile-info" border="0" cellpadding="0" cellspacing="0" width="610" bgcolor="#393738" style="padding:6px 0; max-width:610px; width:100%; display:table;"&gt;
+			&lt;tbody&gt;
+				&lt;tr&gt;
+					&lt;td align="center" colspan="2"&gt;
+						&lt;img src="http://s3.amazonaws.com/ocu/assets/img/footer-logo.jpg" alt="OCU Logo" style="width:85%;" /&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;td align="center" class="no-contextual-highlighting" style="font-size:0.8em;"&gt;
+						&lt;a href="#" style="color:#502e2e; text-decoration:none;"&gt;
+							&lt;span style="color:#ffffff;"&gt;www.oc.edu&lt;br/&gt;800-877-5010&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+					&lt;td align="center" class="no-contextual-highlighting" style="font-size:0.8em; border-left:solid 1px white;"&gt;
+						&lt;a href="#" style="text-decoration:none; color:#ffffff;"&gt;
+							&lt;span style="color:#ffffff;"&gt;2501 E. Memorial Road&lt;br/&gt;Oklahoma City, OK&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table class="wide-info" border="0" cellpadding="0" cellspacing="0" width="610" bgcolor="#393738" style="max-width:610px; width:100%; display:none;"&gt;
+			&lt;tbody&gt;
+				&lt;tr&gt;
+					&lt;td class="no-contextual-highlighting" align="center" style="width:45%; padding:15px 0;" width="275"&gt;
+						&lt;img src="http://s3.amazonaws.com/ocu/assets/img/footer-logo.jpeg" alt="OCU Logo" style="width:85%;" width="220" /&gt;
+					&lt;/td&gt;
+					&lt;td align="center" class="no-contextual-highlighting info" style="width:25%; padding:15px 0; font-size:0.8em;" width="160"&gt;
+						&lt;a href="#" style="color:#ffffff; text-decoration:none;"&gt;
+							&lt;span style="color:#ffffff;"&gt;www.oc.edu&lt;br/&gt;800-877-5010&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+					
+					&lt;td align="center" class="no-contextual-highlighting info" style="width:30%; padding:15px 0; font-size:0.8em;" width="175"&gt;
+						&lt;div style="border-left:solid 1px #ffffff;"&gt;
+							&lt;p style="text-align:left; margin-left:6px; margin-right:6px;"&gt;
+								&lt;a href="#" style="text-decoration:none; color:#ffffff;"&gt;
+									&lt;span style="color:#ffffff;"&gt;2501 E. Memorial Road&lt;br/&gt;Oklahoma City, OK&lt;/span&gt;
+								&lt;/a&gt;
+							&lt;/p&gt;
+						&lt;/div&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table border="0" cellpadding="0" cellspacing="0" style="max-width:610px; width:100%" width="610"&gt;
+			&lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td class="no-contextual-highlighting" align="center" style="padding:12px;"&gt;
+          	&lt;p style="font-size:8pt; line-height:8pt;"&gt;
+              &lt;span style="color:black;"&gt;This message is being sent to ##firstname## ##lastname## at ##email##. If you are not ##firstname## ##lastname## or no longer wish to receive messages of this nature, please &lt;a style="color:blue;" href="##Unsubscribe RedirectURL="https://s3-us-west-1.amazonaws.com/rsrc.enrollmentfuel.com/unsubscribed.htm" ##"&gt;Unsubscribe&lt;/a&gt;&lt;/span&gt;
+          	&lt;/p&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+  &lt;!--[if mso]&gt;
+		&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+	&lt;![endif]--&gt;
+	&lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;</HtmlContent>
+              <TextContent>Hey ##firstname##,
+OC offers an unparalleled urban, Christian education. Located just 10 minutes from downtown Oklahoma City, you'll have access to jobs, internships, and big city entertainment, while engaging in a focused, Christian-based education.
+
+Join our nest, and visit your personal site to start the journey toward becoming an Eagle.
+
+http://werhome.oc.edu/##purl##
+
+Oklahoma Christian University
+2501 E. Memorial Road
+Oklahoma City, OK 73136
+ph. 800-877-5010
+
+This message is being sent to ##firstname## ##lastname## at ##email##. If you are not ##firstname## ##lastname## or no longer wish to receive messages of this nature, please Unsubscribe at:
+##Unsubscribe RedirectURL="https://s3-us-west-1.amazonaws.com/rsrc.enrollmentfuel.com/unsubscribed.htm" ##
+
+
+</TextContent>
+            </Message>
+          </Messages>
+        </Properties>
+      </CampaignElement>
+      <CampaignElement Id="36" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="Email" Category="Outbound" Name="Search Email 7" Position="930,140" SharedCheckout="False">
+        <Events>
+          <Event EventId="20104" GoalId="8" IsDistinct="False" />
+        </Events>
+        <Properties>
+          <Messages>
+            <Message Id="1">
+              <ToAddress>##email##</ToAddress>
+              <FromName>Jancy Scott</FromName>
+              <FromAddress>jancy.scott@oc.edu</FromAddress>
+              <ReplyTo>admissions@oc.edu</ReplyTo>
+              <Subject>An urban, Christian education ##subjectlineaddendum##</Subject>
+              <HtmlContent>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+	&lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type" /&gt;
+	&lt;meta content="width=device-width, initial-scale=1.0" name="viewport" /&gt;
+	&lt;style type="text/css"&gt;
+		body {width:100% !important; -webkit-text-size-adjust:none; -ms-text-size-adjust:100%; margin:0; padding:0;}
+		img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic; border:none;}
+		a img {border:none;}
+		table {mso-table-lspace:0pt; mso-table-rspace:0pt;}
+		table, td, .no-contextual-highlighting p span, a, p, span {font-family:arial !important; border-bottom:0; padding:0; margin:0;}
+		.no-contextual-highlighting {border-bottom:none !important; text-decoration: none;}
+		.mobile-info {display:none !important;}
+		.wide-info {display:block !important; display:table !important;}
+    table#link {width:70% !important;}
+					
+		@media only screen and (max-device-width: 736px) {
+			a[href^="tel"], a[href^="sms"] {
+				text-decoration: none;
+				pointer-events: none;
+				cursor: default;}
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+				text-decoration: default;
+				pointer-events: auto;
+				cursor: default;}
+			.wide-info {display:none !important;}
+			.mobile-info {display:table !important;}
+      table#link {width:100% !important;}
+		}
+					
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+			a[href^="tel"], a[href^="sms"] {
+				text-decoration: none;
+				pointer-events: none;
+				cursor: default;}
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+				text-decoration: default;
+				pointer-events: auto;
+				cursor: default;} 
+		}
+					
+		@media only screen and (device-pixel-ratio: 2) {
+			/* Put your iPhone styles in here */
+
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;center&gt;
+  &lt;!--[if gte mso 9|(IE)]&gt;
+		&lt;style&gt;
+			
+		&lt;/style&gt;
+		&lt;table width="610"&gt;&lt;tr&gt;&lt;td&gt;
+		&lt;![endif]--&gt;&lt;!--[if mso 16]&gt;
+		&lt;style&gt;
+			
+		&lt;/style&gt;
+	&lt;![endif]--&gt;
+  &lt;div style="max-width: 610px; width: 100%"&gt;
+    &lt;img alt="img-banner" src="http://s3.amazonaws.com/ocu/assets/img/search3.JPG" style="max-width:610px; width:100%" width="610" /&gt;
+
+    &lt;table border="0" cellpadding="0" cellspacing="0" style="max-width:610px; width:100%" width="610"&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td align="center" width="610" style="padding-left:15px; padding-right:15px;"&gt;
+						&lt;p style="text-align:left; line-height:16pt; margin:0; padding:0;"&gt;
+							&lt;span&gt;
+								&lt;br/&gt;
+                &lt;b style="font-size:14pt;"&gt;Hey ##firstname##,&lt;/b&gt;&lt;br/&gt;
+                &lt;br/&gt;
+                OC offers an unparalleled urban, Christian education. Located just 10 minutes from downtown Oklahoma City, you'll have access to jobs, internships, and big city entertainment, while engaging in a 
+                focused, Christian-based education.&lt;br/&gt;
+                &lt;br/&gt;
+                Join our nest, and visit your personal site to start the journey toward becoming an Eagle.
+							&lt;/span&gt;
+            &lt;/p&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;center&gt;
+              &lt;table id="link" style="width:100%;" bgcolor="#5EC1B3"&gt;
+                &lt;tr&gt;
+                  &lt;td style="padding:15px 0;" align="center"&gt;
+                    &lt;a style="font-size:16pt; color:black;" href=""&gt;&lt;b&gt;##purl##.weRHOME.oc.edu&lt;/b&gt;&lt;/a&gt;
+                  &lt;/td&gt;
+                &lt;/tr&gt;
+              &lt;/table&gt;
+            &lt;/center&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table class="mobile-info" border="0" cellpadding="0" cellspacing="0" width="610" bgcolor="#393738" style="padding:6px 0; max-width:610px; width:100%; display:table;"&gt;
+			&lt;tbody&gt;
+				&lt;tr&gt;
+					&lt;td align="center" colspan="2"&gt;
+						&lt;img src="http://s3.amazonaws.com/ocu/assets/img/footer-logo.jpg" alt="OCU Logo" style="width:85%;" /&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;td align="center" class="no-contextual-highlighting" style="font-size:0.8em;"&gt;
+						&lt;a href="#" style="color:#502e2e; text-decoration:none;"&gt;
+							&lt;span style="color:#ffffff;"&gt;www.oc.edu&lt;br/&gt;800-877-5010&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+					&lt;td align="center" class="no-contextual-highlighting" style="font-size:0.8em; border-left:solid 1px white;"&gt;
+						&lt;a href="#" style="text-decoration:none; color:#ffffff;"&gt;
+							&lt;span style="color:#ffffff;"&gt;2501 E. Memorial Road&lt;br/&gt;Oklahoma City, OK&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table class="wide-info" border="0" cellpadding="0" cellspacing="0" width="610" bgcolor="#393738" style="max-width:610px; width:100%; display:none;"&gt;
+			&lt;tbody&gt;
+				&lt;tr&gt;
+					&lt;td class="no-contextual-highlighting" align="center" style="width:45%; padding:15px 0;" width="275"&gt;
+						&lt;img src="http://s3.amazonaws.com/ocu/assets/img/footer-logo.jpeg" alt="OCU Logo" style="width:85%;" width="220" /&gt;
+					&lt;/td&gt;
+					&lt;td align="center" class="no-contextual-highlighting info" style="width:25%; padding:15px 0; font-size:0.8em;" width="160"&gt;
+						&lt;a href="#" style="color:#ffffff; text-decoration:none;"&gt;
+							&lt;span style="color:#ffffff;"&gt;www.oc.edu&lt;br/&gt;800-877-5010&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+					
+					&lt;td align="center" class="no-contextual-highlighting info" style="width:30%; padding:15px 0; font-size:0.8em;" width="175"&gt;
+						&lt;div style="border-left:solid 1px #ffffff;"&gt;
+							&lt;p style="text-align:left; margin-left:6px; margin-right:6px;"&gt;
+								&lt;a href="#" style="text-decoration:none; color:#ffffff;"&gt;
+									&lt;span style="color:#ffffff;"&gt;2501 E. Memorial Road&lt;br/&gt;Oklahoma City, OK&lt;/span&gt;
+								&lt;/a&gt;
+							&lt;/p&gt;
+						&lt;/div&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table border="0" cellpadding="0" cellspacing="0" style="max-width:610px; width:100%" width="610"&gt;
+			&lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td class="no-contextual-highlighting" align="center" style="padding:12px;"&gt;
+          	&lt;p style="font-size:8pt; line-height:8pt;"&gt;
+              &lt;span style="color:black;"&gt;This message is being sent to ##firstname## ##lastname## at ##email##. If you are not ##firstname## ##lastname## or no longer wish to receive messages of this nature, please &lt;a style="color:blue;" href="##Unsubscribe RedirectURL="https://s3-us-west-1.amazonaws.com/rsrc.enrollmentfuel.com/unsubscribed.htm" ##"&gt;Unsubscribe&lt;/a&gt;&lt;/span&gt;
+          	&lt;/p&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+  &lt;!--[if mso]&gt;
+		&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+	&lt;![endif]--&gt;
+	&lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;</HtmlContent>
+              <TextContent>Hey ##firstname##,
+OC offers an unparalleled urban, Christian education. Located just 10 minutes from downtown Oklahoma City, you'll have access to jobs, internships, and big city entertainment, while engaging in a focused, Christian-based education.
+
+Join our nest, and visit your personal site to start the journey toward becoming an Eagle.
+
+http://werhome.oc.edu/##purl##
+
+Oklahoma Christian University
+2501 E. Memorial Road
+Oklahoma City, OK 73136
+ph. 800-877-5010
+
+This message is being sent to ##firstname## ##lastname## at ##email##. If you are not ##firstname## ##lastname## or no longer wish to receive messages of this nature, please Unsubscribe at:
+##Unsubscribe RedirectURL="https://s3-us-west-1.amazonaws.com/rsrc.enrollmentfuel.com/unsubscribed.htm" ##
+
+
+</TextContent>
+            </Message>
+          </Messages>
+        </Properties>
+      </CampaignElement>
+      <CampaignElement Id="37" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="Email" Category="Outbound" Name="Search Email 4" Position="480,140" SharedCheckout="False">
+        <Events>
+          <Event EventId="20104" GoalId="8" IsDistinct="False" />
+        </Events>
+        <Properties>
+          <Messages>
+            <Message Id="1">
+              <ToAddress>##email##</ToAddress>
+              <FromName>Jancy Scott</FromName>
+              <FromAddress>jancy.scott@oc.edu</FromAddress>
+              <ReplyTo>admissions@oc.edu</ReplyTo>
+              <Subject>OCishome ##subjectlineaddendum##</Subject>
+              <HtmlContent>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+	&lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type" /&gt;
+	&lt;meta content="width=device-width, initial-scale=1.0" name="viewport" /&gt;
+	&lt;style type="text/css"&gt;
+		body {width:100% !important; -webkit-text-size-adjust:none; -ms-text-size-adjust:100%; margin:0; padding:0;}
+		img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic; border:none;}
+		a img {border:none;}
+		table {mso-table-lspace:0pt; mso-table-rspace:0pt;}
+		table, td, .no-contextual-highlighting p span, a, p, span {font-family:arial !important; border-bottom:0; padding:0; margin:0;}
+		.no-contextual-highlighting {border-bottom:none !important; text-decoration: none;}
+		.mobile-info {display:none !important;}
+		.wide-info {display:block !important; display:table !important;}
+    table#link {width:70% !important;}
+					
+		@media only screen and (max-device-width: 736px) {
+			a[href^="tel"], a[href^="sms"] {
+				text-decoration: none;
+				pointer-events: none;
+				cursor: default;}
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+				text-decoration: default;
+				pointer-events: auto;
+				cursor: default;}
+			.wide-info {display:none !important;}
+			.mobile-info {display:table !important;}
+      table#link {width:100% !important;}
+		}
+					
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+			a[href^="tel"], a[href^="sms"] {
+				text-decoration: none;
+				pointer-events: none;
+				cursor: default;}
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+				text-decoration: default;
+				pointer-events: auto;
+				cursor: default;} 
+		}
+					
+		@media only screen and (device-pixel-ratio: 2) {
+			/* Put your iPhone styles in here */
+
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;center&gt;
+  &lt;!--[if gte mso 9|(IE)]&gt;
+		&lt;style&gt;
+			
+		&lt;/style&gt;
+		&lt;table width="610"&gt;&lt;tr&gt;&lt;td&gt;
+		&lt;![endif]--&gt;&lt;!--[if mso 16]&gt;
+		&lt;style&gt;
+			
+		&lt;/style&gt;
+	&lt;![endif]--&gt;
+  &lt;div style="max-width: 610px; width: 100%"&gt;
+    &lt;img alt="img-banner" src="http://s3.amazonaws.com/ocu/assets/img/search4.JPG" style="max-width:610px; width:100%" width="610" /&gt;
+
+    &lt;table border="0" cellpadding="0" cellspacing="0" style="max-width:610px; width:100%" width="610"&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td align="center" width="610" style="padding-left:15px; padding-right:15px;"&gt;
+						&lt;p style="text-align:left; line-height:16pt; margin:0; padding:0;"&gt;
+							&lt;span&gt;
+								&lt;br/&gt;
+                &lt;b&gt;##firstname##,&lt;/b&gt;  we strive to make OC your home from the first day you step foot on campus. In fact, when you become a freshman at OC, you will participate in the Freshman Experience, which provides a first-year counselor and peer mentor to each student, with the express purpose of helping you have a positive transition through academic, social, and spiritual success.&lt;br/&gt;
+                &lt;br/&gt;
+                Find out why OC is home - it all starts with visiting your personal site.
+							&lt;/span&gt;
+            &lt;/p&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;center&gt;
+              &lt;table id="link" style="width:100%;" bgcolor="#5EC1B3"&gt;
+                &lt;tr&gt;
+                  &lt;td style="padding:15px 0;" align="center"&gt;
+                    &lt;a style="font-size:16pt; color:black;" href=""&gt;&lt;b&gt;##purl##.weRHOME.oc.edu&lt;/b&gt;&lt;/a&gt;
+                  &lt;/td&gt;
+                &lt;/tr&gt;
+              &lt;/table&gt;
+            &lt;/center&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table class="mobile-info" border="0" cellpadding="0" cellspacing="0" width="610" bgcolor="#393738" style="padding:6px 0; max-width:610px; width:100%; display:table;"&gt;
+			&lt;tbody&gt;
+				&lt;tr&gt;
+					&lt;td align="center" colspan="2"&gt;
+						&lt;img src="http://s3.amazonaws.com/ocu/assets/img/footer-logo.jpg" alt="OCU Logo" style="width:85%;" /&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;td align="center" class="no-contextual-highlighting" style="font-size:0.8em;"&gt;
+						&lt;a href="#" style="color:#502e2e; text-decoration:none;"&gt;
+							&lt;span style="color:#ffffff;"&gt;www.oc.edu&lt;br/&gt;800-877-5010&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+					&lt;td align="center" class="no-contextual-highlighting" style="font-size:0.8em; border-left:solid 1px white;"&gt;
+						&lt;a href="#" style="text-decoration:none; color:#ffffff;"&gt;
+							&lt;span style="color:#ffffff;"&gt;2501 E. Memorial Road&lt;br/&gt;Oklahoma City, OK&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table class="wide-info" border="0" cellpadding="0" cellspacing="0" width="610" bgcolor="#393738" style="max-width:610px; width:100%; display:none;"&gt;
+			&lt;tbody&gt;
+				&lt;tr&gt;
+					&lt;td class="no-contextual-highlighting" align="center" style="width:45%; padding:15px 0;" width="275"&gt;
+						&lt;img src="http://s3.amazonaws.com/ocu/assets/img/footer-logo.jpeg" alt="OCU Logo" style="width:85%;" width="220" /&gt;
+					&lt;/td&gt;
+					&lt;td align="center" class="no-contextual-highlighting info" style="width:25%; padding:15px 0; font-size:0.8em;" width="160"&gt;
+						&lt;a href="#" style="color:#ffffff; text-decoration:none;"&gt;
+							&lt;span style="color:#ffffff;"&gt;www.oc.edu&lt;br/&gt;800-877-5010&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+					
+					&lt;td align="center" class="no-contextual-highlighting info" style="width:30%; padding:15px 0; font-size:0.8em;" width="175"&gt;
+						&lt;div style="border-left:solid 1px #ffffff;"&gt;
+							&lt;p style="text-align:left; margin-left:6px; margin-right:6px;"&gt;
+								&lt;a href="#" style="text-decoration:none; color:#ffffff;"&gt;
+									&lt;span style="color:#ffffff;"&gt;2501 E. Memorial Road&lt;br/&gt;Oklahoma City, OK&lt;/span&gt;
+								&lt;/a&gt;
+							&lt;/p&gt;
+						&lt;/div&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table border="0" cellpadding="0" cellspacing="0" style="max-width:610px; width:100%" width="610"&gt;
+			&lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td class="no-contextual-highlighting" align="center" style="padding:12px;"&gt;
+          	&lt;p style="font-size:8pt; line-height:8pt;"&gt;
+              &lt;span style="color:black;"&gt;This message is being sent to ##firstname## ##lastname## at ##email##. If you are not ##firstname## ##lastname## or no longer wish to receive messages of this nature, please &lt;a style="color:blue;" href="##Unsubscribe RedirectURL="https://s3-us-west-1.amazonaws.com/rsrc.enrollmentfuel.com/unsubscribed.htm" ##"&gt;Unsubscribe&lt;/a&gt;&lt;/span&gt;
+          	&lt;/p&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+  &lt;!--[if mso]&gt;
+		&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+	&lt;![endif]--&gt;
+	&lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;</HtmlContent>
+              <TextContent>##firstname##, we strive to make OC your home from the first day you step foot on campus. In fact, when you become a freshman at OC, you will participate in the Freshman Experience, which provides a first-year counselor and peer mentor to each student, with the express purpose of helping you have a positive transition through academic, social, and spiritual success.
+
+Find out why OC is home - it all starts with visiting your personal site.
+
+http://werhome.oc.edu/##purl##
+
+Oklahoma Christian University
+2501 E. Memorial Road
+Oklahoma City, OK 73136
+ph. 800-877-5010
+
+This message is being sent to ##firstname## ##lastname## at ##email##. If you are not ##firstname## ##lastname## or no longer wish to receive messages of this nature, please Unsubscribe at:
+##Unsubscribe RedirectURL="https://s3-us-west-1.amazonaws.com/rsrc.enrollmentfuel.com/unsubscribed.htm" ##
+
+
+</TextContent>
+            </Message>
+          </Messages>
+        </Properties>
+      </CampaignElement>
+      <CampaignElement Id="38" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="Email" Category="Outbound" Name="Search Email 8" Position="1080,140" SharedCheckout="False">
+        <Events>
+          <Event EventId="20104" GoalId="8" IsDistinct="False" />
+        </Events>
+        <Properties>
+          <Messages>
+            <Message Id="1">
+              <ToAddress>##email##</ToAddress>
+              <FromName>Jancy Scott</FromName>
+              <FromAddress>jancy.scott@oc.edu</FromAddress>
+              <ReplyTo>admissions@oc.edu</ReplyTo>
+              <Subject>##firstname##, welcome home ##subjectlineaddendum##</Subject>
+              <HtmlContent>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+	&lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type" /&gt;
+	&lt;meta content="width=device-width, initial-scale=1.0" name="viewport" /&gt;
+	&lt;style type="text/css"&gt;
+		body {width:100% !important; -webkit-text-size-adjust:none; -ms-text-size-adjust:100%; margin:0; padding:0;}
+		img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic; border:none;}
+		a img {border:none;}
+		table {mso-table-lspace:0pt; mso-table-rspace:0pt;}
+		table, td, .no-contextual-highlighting p span, a, p, span {font-family:arial !important; border-bottom:0; padding:0; margin:0;}
+		.no-contextual-highlighting {border-bottom:none !important; text-decoration: none;}
+		.mobile-info {display:none !important;}
+		.wide-info {display:block !important; display:table !important;}
+    table#link {width:70% !important;}
+					
+		@media only screen and (max-device-width: 736px) {
+			a[href^="tel"], a[href^="sms"] {
+				text-decoration: none;
+				pointer-events: none;
+				cursor: default;}
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+				text-decoration: default;
+				pointer-events: auto;
+				cursor: default;}
+			.wide-info {display:none !important;}
+			.mobile-info {display:table !important;}
+      table#link {width:100% !important;}
+		}
+					
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+			a[href^="tel"], a[href^="sms"] {
+				text-decoration: none;
+				pointer-events: none;
+				cursor: default;}
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+				text-decoration: default;
+				pointer-events: auto;
+				cursor: default;} 
+		}
+					
+		@media only screen and (device-pixel-ratio: 2) {
+			/* Put your iPhone styles in here */
+
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;center&gt;
+  &lt;!--[if gte mso 9|(IE)]&gt;
+		&lt;style&gt;
+			
+		&lt;/style&gt;
+		&lt;table width="610"&gt;&lt;tr&gt;&lt;td&gt;
+		&lt;![endif]--&gt;&lt;!--[if mso 16]&gt;
+		&lt;style&gt;
+			
+		&lt;/style&gt;
+	&lt;![endif]--&gt;
+  &lt;div style="max-width: 610px; width: 100%"&gt;
+    &lt;img alt="img-banner" src="http://s3.amazonaws.com/ocu/assets/img/search4.JPG" style="max-width:610px; width:100%" width="610" /&gt;
+
+    &lt;table border="0" cellpadding="0" cellspacing="0" style="max-width:610px; width:100%" width="610"&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td align="center" width="610" style="padding-left:15px; padding-right:15px;"&gt;
+						&lt;p style="text-align:left; line-height:16pt; margin:0; padding:0;"&gt;
+							&lt;span&gt;
+								&lt;br/&gt;
+                &lt;b&gt;##firstname##,&lt;/b&gt;  we strive to make OC your home from the first day you step foot on campus. In fact, when you become a freshman at OC, you will participate in the Freshman Experience, which provides a first-year counselor and peer mentor to each student, with the express purpose of helping you have a positive transition through academic, social, and spiritual success.&lt;br/&gt;
+                &lt;br/&gt;
+                Find out why OC is home - it all starts with visiting your personal site.
+							&lt;/span&gt;
+            &lt;/p&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;center&gt;
+              &lt;table id="link" style="width:100%;" bgcolor="#5EC1B3"&gt;
+                &lt;tr&gt;
+                  &lt;td style="padding:15px 0;" align="center"&gt;
+                    &lt;a style="font-size:16pt; color:black;" href=""&gt;&lt;b&gt;##purl##.weRHOME.oc.edu&lt;/b&gt;&lt;/a&gt;
+                  &lt;/td&gt;
+                &lt;/tr&gt;
+              &lt;/table&gt;
+            &lt;/center&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table class="mobile-info" border="0" cellpadding="0" cellspacing="0" width="610" bgcolor="#393738" style="padding:6px 0; max-width:610px; width:100%; display:table;"&gt;
+			&lt;tbody&gt;
+				&lt;tr&gt;
+					&lt;td align="center" colspan="2"&gt;
+						&lt;img src="http://s3.amazonaws.com/ocu/assets/img/footer-logo.jpg" alt="OCU Logo" style="width:85%;" /&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;td align="center" class="no-contextual-highlighting" style="font-size:0.8em;"&gt;
+						&lt;a href="#" style="color:#502e2e; text-decoration:none;"&gt;
+							&lt;span style="color:#ffffff;"&gt;www.oc.edu&lt;br/&gt;800-877-5010&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+					&lt;td align="center" class="no-contextual-highlighting" style="font-size:0.8em; border-left:solid 1px white;"&gt;
+						&lt;a href="#" style="text-decoration:none; color:#ffffff;"&gt;
+							&lt;span style="color:#ffffff;"&gt;2501 E. Memorial Road&lt;br/&gt;Oklahoma City, OK&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table class="wide-info" border="0" cellpadding="0" cellspacing="0" width="610" bgcolor="#393738" style="max-width:610px; width:100%; display:none;"&gt;
+			&lt;tbody&gt;
+				&lt;tr&gt;
+					&lt;td class="no-contextual-highlighting" align="center" style="width:45%; padding:15px 0;" width="275"&gt;
+						&lt;img src="http://s3.amazonaws.com/ocu/assets/img/footer-logo.jpeg" alt="OCU Logo" style="width:85%;" width="220" /&gt;
+					&lt;/td&gt;
+					&lt;td align="center" class="no-contextual-highlighting info" style="width:25%; padding:15px 0; font-size:0.8em;" width="160"&gt;
+						&lt;a href="#" style="color:#ffffff; text-decoration:none;"&gt;
+							&lt;span style="color:#ffffff;"&gt;www.oc.edu&lt;br/&gt;800-877-5010&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+					
+					&lt;td align="center" class="no-contextual-highlighting info" style="width:30%; padding:15px 0; font-size:0.8em;" width="175"&gt;
+						&lt;div style="border-left:solid 1px #ffffff;"&gt;
+							&lt;p style="text-align:left; margin-left:6px; margin-right:6px;"&gt;
+								&lt;a href="#" style="text-decoration:none; color:#ffffff;"&gt;
+									&lt;span style="color:#ffffff;"&gt;2501 E. Memorial Road&lt;br/&gt;Oklahoma City, OK&lt;/span&gt;
+								&lt;/a&gt;
+							&lt;/p&gt;
+						&lt;/div&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table border="0" cellpadding="0" cellspacing="0" style="max-width:610px; width:100%" width="610"&gt;
+			&lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td class="no-contextual-highlighting" align="center" style="padding:12px;"&gt;
+          	&lt;p style="font-size:8pt; line-height:8pt;"&gt;
+              &lt;span style="color:black;"&gt;This message is being sent to ##firstname## ##lastname## at ##email##. If you are not ##firstname## ##lastname## or no longer wish to receive messages of this nature, please &lt;a style="color:blue;" href="##Unsubscribe RedirectURL="https://s3-us-west-1.amazonaws.com/rsrc.enrollmentfuel.com/unsubscribed.htm" ##"&gt;Unsubscribe&lt;/a&gt;&lt;/span&gt;
+          	&lt;/p&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+  &lt;!--[if mso]&gt;
+		&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+	&lt;![endif]--&gt;
+	&lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;</HtmlContent>
+              <TextContent>##firstname##, we strive to make OC your home from the first day you step foot on campus. In fact, when you become a freshman at OC, you will participate in the Freshman Experience, which provides a first-year counselor and peer mentor to each student, with the express purpose of helping you have a positive transition through academic, social, and spiritual success.
+
+Find out why OC is home - it all starts with visiting your personal site.
+
+http://werhome.oc.edu/##purl##
+
+Oklahoma Christian University
+2501 E. Memorial Road
+Oklahoma City, OK 73136
+ph. 800-877-5010
+
+This message is being sent to ##firstname## ##lastname## at ##email##. If you are not ##firstname## ##lastname## or no longer wish to receive messages of this nature, please Unsubscribe at:
+##Unsubscribe RedirectURL="https://s3-us-west-1.amazonaws.com/rsrc.enrollmentfuel.com/unsubscribed.htm" ##
+
+
+</TextContent>
+            </Message>
+          </Messages>
+        </Properties>
+      </CampaignElement>
+      <CampaignElement Id="39" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="Email" Category="Outbound" Name="Nurture Email 2" Position="170,630" SharedCheckout="False" IsTrackingRequired="False" RuleGroup="nurture">
+        <Events>
+          <Event EventId="20104" GoalId="8" IsDistinct="False" />
+          <Event EventId="20105" GoalId="4" IsDistinct="False" />
+          <Event EventId="20105" Score="20" GoalId="2" EventOption="oc.edu" Operator="Contains" IsDistinct="False" />
+        </Events>
+        <Properties>
+          <Messages>
+            <Message Id="1">
+              <ToAddress>##email##</ToAddress>
+              <FromName>Jancy Scott</FromName>
+              <FromAddress>jancy.scott@oc.edu</FromAddress>
+              <ReplyTo>admissions@oc.edu</ReplyTo>
+              <Subject>A lifetime of community ##emailsubjectlineaddendum##</Subject>
+              <HtmlContent>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+	&lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type" /&gt;
+	&lt;meta content="width=device-width, initial-scale=1.0" name="viewport" /&gt;
+	&lt;style type="text/css"&gt;
+		body {width:100% !important; -webkit-text-size-adjust:none; -ms-text-size-adjust:100%; margin:0; padding:0;}
+		img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic; border:none;}
+		a img {border:none;}
+		table {mso-table-lspace:0pt; mso-table-rspace:0pt;}
+		table, td, .no-contextual-highlighting p span, a, p, span {font-family:arial !important; border-bottom:0; padding:0; margin:0;}
+		.no-contextual-highlighting {border-bottom:none !important; text-decoration: none;}
+		.mobile-info {display:none !important;}
+		.wide-info {display:block !important; display:table !important;}
+					
+		@media only screen and (max-device-width: 736px) {
+			a[href^="tel"], a[href^="sms"] {
+				text-decoration: none;
+				pointer-events: none;
+				cursor: default;}
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+				text-decoration: default;
+				pointer-events: auto;
+				cursor: default;}
+				.wide-info {display:none !important;}
+				.mobile-info {display:table !important;}
+		}
+					
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+			a[href^="tel"], a[href^="sms"] {
+				text-decoration: none;
+				pointer-events: none;
+				cursor: default;}
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+				text-decoration: default;
+				pointer-events: auto;
+				cursor: default;} 
+		}
+					
+		@media only screen and (device-pixel-ratio: 2) {
+			/* Put your iPhone styles in here */
+
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;center&gt;
+  &lt;!--[if gte mso 9|(IE)]&gt;
+		&lt;style&gt;
+			
+		&lt;/style&gt;
+		&lt;table width="610"&gt;&lt;tr&gt;&lt;td&gt;
+		&lt;![endif]--&gt;&lt;!--[if mso 16]&gt;
+		&lt;style&gt;
+			
+		&lt;/style&gt;
+	&lt;![endif]--&gt;
+  &lt;div style="max-width: 610px; width: 100%"&gt;
+    &lt;img alt="img-banner" src="http://s3.amazonaws.com/ocu/assets/img/nurture2.JPG" style="max-width:610px; width:100%" width="610" /&gt;
+
+    &lt;table border="0" cellpadding="0" cellspacing="0" style="max-width:610px; width:100%" width="610"&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td align="center" class="no-contextual-highlighting" width="610" style="padding-left:15px; padding-right:15px;"&gt;
+						&lt;p style="text-align:left; line-height:16pt; margin:0; padding:0;"&gt;
+							&lt;span&gt;
+								&lt;br/&gt;
+                &lt;b&gt;##firstname##,&lt;/b&gt;
+                &lt;br/&gt;
+								&lt;br/&gt;
+                OC is a community of faith where you will make friends for a lifetime, and there are so many ways to &lt;a href="##get-involved##"&gt;get involved&lt;/a&gt;.
+              &lt;/span&gt;
+              &lt;br/&gt;
+              &lt;br/&gt;
+              &lt;span style="color:rgb(52, 155, 240); font-weight:bold; font-size:1.2em;"&gt;&amp;#9745;&lt;/span&gt; 60 &lt;a href="##student-organizations##"&gt;student organizations&lt;/a&gt;
+              &lt;br/&gt;
+              &lt;span style="color:rgb(52, 155, 240); font-weight:bold; font-size:1.2em;"&gt;&amp;#9745;&lt;/span&gt; Almost 1,000 students competing in 16 &lt;a href="##sports##"&gt;intramural sports&lt;/a&gt;
+              &lt;br/&gt;
+              &lt;span style="color:rgb(52, 155, 240); font-weight:bold; font-size:1.2em;"&gt;&amp;#9745;&lt;/span&gt; 20 &lt;a href="##study-abroad##"&gt;study abroad&lt;/a&gt; and off-campus learning opportunities
+              &lt;br/&gt;
+              &lt;br/&gt;
+              &lt;span&gt;
+              &lt;a href="##visit##"&gt;Schedule a visit&lt;/a&gt; to campus to get a first look at the place we all call home&amp;mdash;we hope it will be your home too.
+              &lt;br/&gt;
+              &lt;br/&gt;
+              &lt;br/&gt;
+              See you soon!&lt;br/&gt;
+              &lt;img src="http://s3.amazonaws.com/ocu/assets/img/JancySig.jpg" alt="Jancy Scott"/&gt;&lt;br/&gt;
+              Jancy Scott&lt;br/&gt;
+              Director of Admissions&lt;br/&gt;
+              &lt;br/&gt;
+              &lt;/span&gt;
+						&lt;/p&gt;
+          &lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table class="mobile-info" border="0" cellpadding="0" cellspacing="0" width="610" bgcolor="#393738" style="padding:6px 0; max-width:610px; width:100%; display:table;"&gt;
+			&lt;tbody&gt;
+				&lt;tr&gt;
+					&lt;td align="center" colspan="2"&gt;
+						&lt;img src="http://s3.amazonaws.com/ocu/assets/img/footer-logo.jpg" alt="OCU Logo" style="width:85%;" /&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;td align="center" class="no-contextual-highlighting" style="font-size:0.8em;"&gt;
+						&lt;a href="#" style="color:#502e2e; text-decoration:none;"&gt;
+							&lt;span style="color:#ffffff;"&gt;www.oc.edu&lt;br/&gt;800-877-5010&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+					&lt;td align="center" class="no-contextual-highlighting" style="font-size:0.8em; border-left:solid 1px white;"&gt;
+						&lt;a href="#" style="text-decoration:none; color:#ffffff;"&gt;
+							&lt;span style="color:#ffffff;"&gt;2501 E. Memorial Road&lt;br/&gt;Oklahoma City, OK&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table class="wide-info" border="0" cellpadding="0" cellspacing="0" width="610" bgcolor="#393738" style="max-width:610px; width:100%; display:none;"&gt;
+			&lt;tbody&gt;
+				&lt;tr&gt;
+					&lt;td class="no-contextual-highlighting" align="center" style="width:45%; padding:15px 0;" width="275"&gt;
+						&lt;img src="http://s3.amazonaws.com/ocu/assets/img/footer-logo.jpeg" alt="OCU Logo" style="width:85%;" width="220" /&gt;
+					&lt;/td&gt;
+					&lt;td align="center" class="no-contextual-highlighting info" style="width:25%; padding:15px 0; font-size:0.8em;" width="160"&gt;
+						&lt;a href="#" style="color:#ffffff; text-decoration:none;"&gt;
+							&lt;span style="color:#ffffff;"&gt;www.oc.edu&lt;br/&gt;800-877-5010&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+					
+					&lt;td align="center" class="no-contextual-highlighting info" style="width:30%; padding:15px 0; font-size:0.8em;" width="175"&gt;
+						&lt;div style="border-left:solid 1px #ffffff;"&gt;
+							&lt;p style="text-align:left; margin-left:6px; margin-right:6px;"&gt;
+								&lt;a href="#" style="text-decoration:none; color:#ffffff;"&gt;
+									&lt;span style="color:#ffffff;"&gt;2501 E. Memorial Road&lt;br/&gt;Oklahoma City, OK&lt;/span&gt;
+								&lt;/a&gt;
+							&lt;/p&gt;
+						&lt;/div&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table border="0" cellpadding="0" cellspacing="0" style="max-width:610px; width:100%" width="610"&gt;
+			&lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td class="no-contextual-highlighting" align="center" style="padding:12px;"&gt;
+          	&lt;p style="font-size:8pt; line-height:8pt;"&gt;
+              &lt;span&gt;This message is being sent to ##firstname## ##lastname## at ##email##. If you are not ##firstname## ##lastname## or no longer wish to receive messages of this nature, please &lt;a style="color:blue;" href="##Unsubscribe RedirectURL="https://s3-us-west-1.amazonaws.com/rsrc.enrollmentfuel.com/unsubscribed.htm" ##"&gt;Unsubscribe&lt;/a&gt;&lt;/span&gt;
+          	&lt;/p&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+  &lt;!--[if mso]&gt;
+		&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+	&lt;![endif]--&gt;
+	&lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</HtmlContent>
+              <TextContent>##firstname##, 
+
+OC is a community of faith where you will make friends for a lifetime, and there are so many ways to get involved. 
+
+☑ 60 student organizations 
+☑ Almost 1,000 students competing in 16 intramural sports 
+☑ 20 study abroad and off-campus learning opportunities 
+
+Schedule a visit to campus to get a first look at the place we all call home—we hope it will be your home too. 
+
+See you soon!
+Jancy Scott
+Director of Admissions
+www.oc.edu
+800-877-5010
+2501 E. Memorial Road
+Oklahoma City, OK
+ 
+This message is being sent to ##firstname## ##lastname## at ##email##. If you are not ##firstname## ##lastname## or no longer wish to receive messages of this nature, please Unsubscribe at:
+##Unsubscribe RedirectURL="https://s3-us-west-1.amazonaws.com/rsrc.enrollmentfuel.com/unsubscribed.htm" ##
+</TextContent>
+            </Message>
+          </Messages>
+        </Properties>
+      </CampaignElement>
+      <CampaignElement Id="40" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="Email" Category="Outbound" Name="Nurture Email 3" Position="170,750" SharedCheckout="False" IsTrackingRequired="False" RuleGroup="nurture">
+        <Events>
+          <Event EventId="20104" GoalId="8" IsDistinct="False" />
+          <Event EventId="20105" GoalId="4" IsDistinct="False" />
+          <Event EventId="20105" Score="20" GoalId="2" EventOption="oc.edu" Operator="Contains" IsDistinct="False" />
+        </Events>
+        <Properties>
+          <Messages>
+            <Message Id="1">
+              <ToAddress>##email##</ToAddress>
+              <FromName>Jancy Scott</FromName>
+              <FromAddress>jancy.scott@oc.edu</FromAddress>
+              <ReplyTo>admissions@oc.edu</ReplyTo>
+              <Subject>Australia, China, Ghana, and beyond ##emailsubjectlineaddendum##</Subject>
+              <HtmlContent>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+	&lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type" /&gt;
+	&lt;meta content="width=device-width, initial-scale=1.0" name="viewport" /&gt;
+	&lt;style type="text/css"&gt;
+		body {width:100% !important; -webkit-text-size-adjust:none; -ms-text-size-adjust:100%; margin:0; padding:0;}
+		img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic; border:none;}
+		a img {border:none;}
+		table {mso-table-lspace:0pt; mso-table-rspace:0pt;}
+		table, td, .no-contextual-highlighting p span, a, p, span {font-family:arial !important; border-bottom:0; padding:0; margin:0;}
+		.no-contextual-highlighting {border-bottom:none !important; text-decoration: none;}
+		.mobile-info {display:none !important;}
+		.wide-info {display:block !important; display:table !important;}
+					
+		@media only screen and (max-device-width: 736px) {
+			a[href^="tel"], a[href^="sms"] {
+				text-decoration: none;
+				pointer-events: none;
+				cursor: default;}
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+				text-decoration: default;
+				pointer-events: auto;
+				cursor: default;}
+				.wide-info {display:none !important;}
+				.mobile-info {display:table !important;}
+		}
+					
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+			a[href^="tel"], a[href^="sms"] {
+				text-decoration: none;
+				pointer-events: none;
+				cursor: default;}
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+				text-decoration: default;
+				pointer-events: auto;
+				cursor: default;} 
+		}
+					
+		@media only screen and (device-pixel-ratio: 2) {
+			/* Put your iPhone styles in here */
+
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;center&gt;
+  &lt;!--[if gte mso 9|(IE)]&gt;
+		&lt;style&gt;
+			
+		&lt;/style&gt;
+		&lt;table width="610"&gt;&lt;tr&gt;&lt;td&gt;
+		&lt;![endif]--&gt;&lt;!--[if mso 16]&gt;
+		&lt;style&gt;
+			
+		&lt;/style&gt;
+	&lt;![endif]--&gt;
+  &lt;div style="max-width: 610px; width: 100%"&gt;
+    &lt;img alt="img-banner" src="http://s3.amazonaws.com/ocu/assets/img/nurture3.JPG" style="max-width:610px; width:100%" width="610" /&gt;
+
+    &lt;table border="0" cellpadding="0" cellspacing="0" style="max-width:610px; width:100%" width="610"&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td align="center" class="no-contextual-highlighting" width="610" style="padding-left:15px; padding-right:15px;"&gt;
+						&lt;p style="text-align:left; line-height:16pt; margin:0; padding:0;"&gt;
+							&lt;span&gt;
+								&lt;br/&gt;
+                &lt;b&gt;Hi, ##firstname##&lt;/b&gt;
+                &lt;br/&gt;
+								&lt;br/&gt;
+                At OC, there are countless &lt;a href="##opportunities##"&gt;opportunities to serve&lt;/a&gt;, make a difference, and live out your passion. More than 60&amp;#37; of undergrad students are involved in service and &lt;a href="##ministry##"&gt;ministry opportunities&lt;/a&gt;, and around 500 students, faculty, and staff participate in &lt;a href="##mission##"&gt;mission trips&lt;/a&gt; each year, ranging from Australia to China to Ghana, and beyond.&lt;br/&gt;
+                &lt;br/&gt;
+                Our community is filled with smart, kind, diverse and fun Humans of OC. &lt;a href="##stories##"&gt;Read their stories&lt;/a&gt;, and then schedule your own visit to experience firsthand why we call OC home.&lt;br/&gt;
+                &lt;br/&gt;
+                &lt;br/&gt;
+                Let us know how we can help you plan your &lt;a href="##visit##"&gt;visit&lt;/a&gt;.&lt;br/&gt;
+                &lt;img src="http://s3.amazonaws.com/ocu/assets/img/JancySig.jpg" alt="Jancy Scott"/&gt;&lt;br/&gt;
+                Jancy Scott&lt;br/&gt;
+                Director of Admissions&lt;br/&gt;
+                &lt;br/&gt;
+              &lt;/span&gt;
+						&lt;/p&gt;
+          &lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table class="mobile-info" border="0" cellpadding="0" cellspacing="0" width="610" bgcolor="#393738" style="padding:6px 0; max-width:610px; width:100%; display:table;"&gt;
+			&lt;tbody&gt;
+				&lt;tr&gt;
+					&lt;td align="center" colspan="2"&gt;
+						&lt;img src="http://s3.amazonaws.com/ocu/assets/img/footer-logo.jpg" alt="OCU Logo" style="width:85%;" /&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;td align="center" class="no-contextual-highlighting" style="font-size:0.8em;"&gt;
+						&lt;a href="#" style="color:#502e2e; text-decoration:none;"&gt;
+							&lt;span style="color:#ffffff;"&gt;www.oc.edu&lt;br/&gt;800-877-5010&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+					&lt;td align="center" class="no-contextual-highlighting" style="font-size:0.8em; border-left:solid 1px white;"&gt;
+						&lt;a href="#" style="text-decoration:none; color:#ffffff;"&gt;
+							&lt;span style="color:#ffffff;"&gt;2501 E. Memorial Road&lt;br/&gt;Oklahoma City, OK&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table class="wide-info" border="0" cellpadding="0" cellspacing="0" width="610" bgcolor="#393738" style="max-width:610px; width:100%; display:none;"&gt;
+			&lt;tbody&gt;
+				&lt;tr&gt;
+					&lt;td class="no-contextual-highlighting" align="center" style="width:45%; padding:15px 0;" width="275"&gt;
+						&lt;img src="http://s3.amazonaws.com/ocu/assets/img/footer-logo.jpeg" alt="OCU Logo" style="width:85%;" width="220" /&gt;
+					&lt;/td&gt;
+					&lt;td align="center" class="no-contextual-highlighting info" style="width:25%; padding:15px 0; font-size:0.8em;" width="160"&gt;
+						&lt;a href="#" style="color:#ffffff; text-decoration:none;"&gt;
+							&lt;span style="color:#ffffff;"&gt;www.oc.edu&lt;br/&gt;800-877-5010&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+					
+					&lt;td align="center" class="no-contextual-highlighting info" style="width:30%; padding:15px 0; font-size:0.8em;" width="175"&gt;
+						&lt;div style="border-left:solid 1px #ffffff;"&gt;
+							&lt;p style="text-align:left; margin-left:6px; margin-right:6px;"&gt;
+								&lt;a href="#" style="text-decoration:none; color:#ffffff;"&gt;
+									&lt;span style="color:#ffffff;"&gt;2501 E. Memorial Road&lt;br/&gt;Oklahoma City, OK&lt;/span&gt;
+								&lt;/a&gt;
+							&lt;/p&gt;
+						&lt;/div&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;table border="0" cellpadding="0" cellspacing="0" style="max-width:610px; width:100%" width="610"&gt;
+			&lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td class="no-contextual-highlighting" align="center" style="padding:12px;"&gt;
+          	&lt;p style="font-size:8pt; line-height:8pt;"&gt;
+              &lt;span&gt;This message is being sent to ##firstname## ##lastname## at ##email##. If you are not ##firstname## ##lastname## or no longer wish to receive messages of this nature, please &lt;a style="color:blue;" href="##Unsubscribe RedirectURL="https://s3-us-west-1.amazonaws.com/rsrc.enrollmentfuel.com/unsubscribed.htm" ##"&gt;Unsubscribe&lt;/a&gt;&lt;/span&gt;
+          	&lt;/p&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+  &lt;!--[if mso]&gt;
+		&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+	&lt;![endif]--&gt;
+	&lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</HtmlContent>
+              <TextContent>Hi, ##firstname## 
+
+At OC, there are countless opportunities to serve, make a difference, and live out your passion. More than 60% of undergrad students are involved in service and ministry opportunities, and around 500 students, faculty, and staff participate in mission trips each year, ranging from Australia to China to Ghana, and beyond.
+
+Our community is filled with smart, kind, diverse and fun Humans of OC. Read their stories, and then schedule your own visit to experience firsthand why we call OC home.
+
+Let us know how we can help you plan your visit.
+
+Jancy Scott
+Director of Admissions
+www.oc.edu
+800-877-5010
+2501 E. Memorial Road
+Oklahoma City, OK
+ 
+This message is being sent to ##firstname## ##lastname## at ##email##. If you are not ##firstname## ##lastname## or no longer wish to receive messages of this nature, please Unsubscribe at:
+##Unsubscribe RedirectURL="https://s3-us-west-1.amazonaws.com/rsrc.enrollmentfuel.com/unsubscribed.htm" ##
+</TextContent>
+            </Message>
+          </Messages>
+        </Properties>
+      </CampaignElement>
+    </CampaignElements>
+    <CampaignConnections>
+      <CampaignConnection StartElementId="3" EndElementId="6" />
+      <CampaignConnection StartElementId="6" EndElementId="7" />
+      <CampaignConnection StartElementId="12" EndElementId="11" />
+      <CampaignConnection StartElementId="12" EndElementId="13" />
+      <CampaignConnection StartElementId="3" EndElementId="15" />
+      <CampaignConnection StartElementId="15" EndElementId="10" />
+      <CampaignConnection StartElementId="16" EndElementId="17" />
+      <CampaignConnection StartElementId="14" EndElementId="22" />
+      <CampaignConnection StartElementId="11" EndElementId="23" />
+      <CampaignConnection StartElementId="23" EndElementId="24" />
+      <CampaignConnection StartElementId="31" EndElementId="3" />
+      <CampaignConnection StartElementId="1" EndElementId="31" />
+      <CampaignConnection StartElementId="21" EndElementId="31" />
+      <CampaignConnection StartElementId="25" EndElementId="31" />
+      <CampaignConnection StartElementId="26" EndElementId="31" />
+      <CampaignConnection StartElementId="33" EndElementId="3" />
+      <CampaignConnection StartElementId="35" EndElementId="3" />
+      <CampaignConnection StartElementId="37" EndElementId="3" />
+      <CampaignConnection StartElementId="32" EndElementId="3" />
+      <CampaignConnection StartElementId="34" EndElementId="3" />
+      <CampaignConnection StartElementId="36" EndElementId="3" />
+      <CampaignConnection StartElementId="38" EndElementId="3" />
+      <CampaignConnection StartElementId="1" EndElementId="33" />
+      <CampaignConnection StartElementId="21" EndElementId="33" />
+      <CampaignConnection StartElementId="25" EndElementId="33" />
+      <CampaignConnection StartElementId="26" EndElementId="33" />
+      <CampaignConnection StartElementId="1" EndElementId="35" />
+      <CampaignConnection StartElementId="21" EndElementId="35" />
+      <CampaignConnection StartElementId="25" EndElementId="35" />
+      <CampaignConnection StartElementId="26" EndElementId="35" />
+      <CampaignConnection StartElementId="1" EndElementId="37" />
+      <CampaignConnection StartElementId="21" EndElementId="37" />
+      <CampaignConnection StartElementId="25" EndElementId="37" />
+      <CampaignConnection StartElementId="26" EndElementId="37" />
+      <CampaignConnection StartElementId="1" EndElementId="32" />
+      <CampaignConnection StartElementId="21" EndElementId="32" />
+      <CampaignConnection StartElementId="25" EndElementId="32" />
+      <CampaignConnection StartElementId="26" EndElementId="32" />
+      <CampaignConnection StartElementId="1" EndElementId="34" />
+      <CampaignConnection StartElementId="21" EndElementId="34" />
+      <CampaignConnection StartElementId="25" EndElementId="34" />
+      <CampaignConnection StartElementId="26" EndElementId="34" />
+      <CampaignConnection StartElementId="1" EndElementId="36" />
+      <CampaignConnection StartElementId="21" EndElementId="36" />
+      <CampaignConnection StartElementId="25" EndElementId="36" />
+      <CampaignConnection StartElementId="26" EndElementId="36" />
+      <CampaignConnection StartElementId="1" EndElementId="38" />
+      <CampaignConnection StartElementId="21" EndElementId="38" />
+      <CampaignConnection StartElementId="25" EndElementId="38" />
+      <CampaignConnection StartElementId="26" EndElementId="38" />
+      <CampaignConnection StartElementId="6" EndElementId="39" />
+      <CampaignConnection StartElementId="6" EndElementId="40" />
+    </CampaignConnections>
+  </Campaign>
+  <RuleGroupSet>
+    <RuleGroup Name="nurture" Description="">
+      <ContentVariables>
+        <ContentVariable Name="oc">http://www.oc.edu/?purl=##purl##</ContentVariable>
+        <ContentVariable Name="admissions">http://www.oc.edu/admissions/undergraduate/counselors/?purl=##purl##</ContentVariable>
+        <ContentVariable Name="affordable">http://www.oc.edu/services/financial/index.html?purl=##purl##</ContentVariable>
+        <ContentVariable Name="scholarships">http://www.oc.edu/services/financial/financial-aid/scholarships/index.html?purl=##purl##</ContentVariable>
+        <ContentVariable Name="financial-aid">http://www.oc.edu/services/financial/financial-aid/?purl=##purl##</ContentVariable>
+        <ContentVariable Name="apply">https://oc.elluciancrmrecruit.com/admissions/pages/welcome.aspx?purl=##purl##</ContentVariable>
+        <ContentVariable Name="get-involved">http://www.oc.edu/student-life/?purl=##purl##</ContentVariable>
+        <ContentVariable Name="student-organizations">http://www.oc.edu/student-life/clubs-social-life/?purl=##purl##</ContentVariable>
+        <ContentVariable Name="sports">http://www.oc.edu/student-life/intramurals/?purl=##purl##</ContentVariable>
+        <ContentVariable Name="study-abroad">http://www.oc.edu/services/international-programs/study-abroad/index.html?purl=##purl##</ContentVariable>
+        <ContentVariable Name="visit">http://www.oc.edu/admissions/undergraduate/visit/?purl=##purl##</ContentVariable>
+        <ContentVariable Name="opportunities">http://www.oc.edu/student-life/clubs-social-life/service-projects.html?purl=##purl##</ContentVariable>
+        <ContentVariable Name="ministry">http://www.oc.edu/spiritual-life/index.html?purl=##purl##</ContentVariable>
+        <ContentVariable Name="mission">http://www.oc.edu/spiritual-life/center-for-global-missions/?purl=##purl##</ContentVariable>
+        <ContentVariable Name="stories">http://www.oc.edu/about/humans-of-oc.html?purl=##purl##</ContentVariable>
+      </ContentVariables>
+    </RuleGroup>
+  </RuleGroupSet>
+</Program>

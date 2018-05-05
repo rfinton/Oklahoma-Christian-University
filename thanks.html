@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      var submitaction = "##submitaction##";
+
+      if(submitaction.search("Visit") > 0) {
+        location.href = "https://www.oc.edu/admissions/undergraduate/visit/?purl=##purl##";
+      }
+    </script>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <title>OCU - WeRHome</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://s3.amazonaws.com/ocu/assets/css/style.css">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div id="main-content">
+        <div class="header">
+          <img id="hoc" class="hoc-banner" src="https://s3.amazonaws.com/ocu/assets/img/hoc2.JPG" alt="humans-of-oc">
+          <img id="hoc2-mobile" class="hoc-banner" src="https://s3.amazonaws.com/ocu/assets/img/hoc2-mobile.JPG" alt="humans-of-oc">
+        </div>
+        
+        <p class="main-text">
+          <b style="font-size:1.3em;">Thanks ##firstname##!</b><br/>
+          <br/>
+          <b>Humans of OC do amazing things. We can tell you will, too. Thanks for letting us know:</b>
+        </p>
+
+        <p class="main-text" id="selections"></p>
+
+        <p class="main-text">
+          Because we know this information about you, we can ensure you <b>Live Jesus Loud</b>, everyday.<br/>
+          <br/>
+          Come visit us, ##firstname##&mdash;Oklahoma Christian and the city are home&mdash;and we want you to be part of the family. Let's get your visit scheduled right away, using the link below.<br/>
+          <br/>
+          <img id="sig" src="https://s3.amazonaws.com/ocu/assets/img/JancySig.jpg" alt="Jancy Scott"><br/>
+          Jancy Scott<br/>
+          Director of Admission
+        </p>
+
+        <div class="links">
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="link">
+                <a target="_blank" href="##visit##">Visit Campus</a>
+              </div>
+              
+            </div>
+            <div class="col-xs-6">
+              <div class="link">
+                <a target="_blank" href="##application##">Application</a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="link">
+                <a target="_blank" href="##about-oc##">About OC</a>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="link">
+                <a target="_blank" href="##financial-aid##">Financial Aid</a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="link">
+                <a target="_blank" href="##majors##">Majors</a>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="link">
+                <a target="_blank" href="##life-beyond-campus##">Life Beyond Campus</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="footer">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6" id="footer-logo">
+            <img src="https://s3.amazonaws.com/ocu/assets/img/ocu-logo.svg" alt="ocu-logo">
+          </div>
+          <div class="col-xs-12 col-sm-6 address-info">
+            <div>www.oc.edu<br/>800-877-5010</div>
+            <div>2501 E. Memorial Road<br/>Oklahoma City, OK</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://s3.amazonaws.com/ocu/node_modules/jquery/jquery.min.js"></script>
+    <script src="https://s3.amazonaws.com/ocu/node_modules/velocity/velocity.min.js"></script>
+    <script src="https://s3.amazonaws.com/ocu/node_modules/velocity/velocity.ui.min.js"></script>
+    <script src="https://s3.amazonaws.com/ocu/assets/js/view.js"></script>
+    <script src="https://s3.amazonaws.com/ocu/assets/js/animations.js"></script>
+    <script src="https://s3.amazonaws.com/ocu/assets/js/controller.js"></script>
+    <script>parseFormResp("##form_resp##");</script>
+  </body>
+</html>
