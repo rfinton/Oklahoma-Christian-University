@@ -12,9 +12,10 @@
 		table, td, .no-contextual-highlighting p {font-family:arial !important; border-bottom:0; padding:0; margin:0;}
 		.no-contextual-highlighting a {border-bottom:none !important; text-decoration: none;}
 		table#link {width:70% !important;}
+		#break {display:none;}
 
-		@media only screen and (max-width: 736px) {
-			table#link {width:100% !important;}
+		@media only screen and (max-width: 420px) {
+			#break {display:inline;}
 		}
 	</style>
 </head>
@@ -57,10 +58,10 @@
             <center>
               <table id="link" style="width:100%;" bgcolor="#5EC1B3">
                 <tr>
-                  <td style="padding:15px 0;" align="center">
+                  <td style="padding:15px 6px;" align="center">
 										<a 
 											href="##InboundTouchPoint Callback="1:1:1" PURL="True" CallbackName="searchEmail-3" PurlPosition="Prefix"##" 
-											style="font-size:1.1em; color:black;"><b>##purl##.weRHOME.oc.edu</b></a>
+											style="font-size:1.1em; color:black;"><b>##purl##.<br id="break">weRHOME.oc.edu</b></a>
                   </td>
                 </tr>
               </table>

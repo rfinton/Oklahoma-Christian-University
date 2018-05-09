@@ -125,13 +125,11 @@
       var blur = 8.0;
       var filter = document.querySelector('#feGaussianBlur1189');
       
-      (function focus() {
-        if(blur > 0) {
+      if(blur > 0) {
           filter.setAttribute('stdDeviation', blur);
           blur = blur - 0.05;
           requestAnimationFrame(focus);
         }
-      })();
     </script>
   </body>
 </html>    

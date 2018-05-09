@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <title>OCU - WeRHome</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="assets/css/style.css">-->
+    <style>
+      body {
+        background-image: url('https://s3.amazonaws.com/ocu/assets/img/gradient-wallpaper-1.jpg');
+        background-size: cover;}
+      .container-fluid {max-width: 1024px; display: none; background-color: #ffffff;}
+      #svg-object {width: 650px; height: 183px; opacity: 0;}
+      .header {
+        background-image: url('https://s3.amazonaws.com/ocu/assets/img/humans.jpeg');
+        background-repeat: none;
+        background-size: cover;
+        padding: 120px 0;
+        text-align: center;}
+      #main-content {padding: 0 15px;}
+      #p_01 {
+        font-weight: bold;
+        padding: 30px 0;}
+      table {min-height: 100px;}
+      .icons {
+        min-width: 100px;
+        min-height: 100px;
+        position: relative;}
+      .icon {
+        width: 100px; 
+        height: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;}
+      .icon:hover {cursor: pointer;}
+      .icon-clicked {display: none;}
+      .desc {padding: 0 0 0 12px;}
+      #actions {
+        width: 60%;
+        margin: 30px auto;
+        text-align: center;}
+      #actions p {
+        font-weight: bold;
+        text-decoration: underline;
+        padding: 15px 0;}
+      #ready p {
+        background-color: #5EC1B3;}
+      #actions div:hover {cursor: pointer;}
+      
+      #footer {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0;
+        text-align: center;
+        color: #ffffff;
+        background-color: #393738;}
+      .address-info {
+        display: flex;
+        flex: 1;
+        justify-content: center;}
+      .address-info div {
+        text-align: left;
+        padding: 0 20px;}
+      .address-info div:first-of-type {border-right: solid 2px #ffffff;}
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="header row">
+        <svg id="svg-object" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink">
+          <filter
+            style="color-interpolation-filters:sRGB"
+            inkscape:label="Blur"
+            id="filter1191">
+            <feGaussianBlur
+              stdDeviation="2 2"
+              result="blur"
+              id="feGaussianBlur1189" />
+          </filter>
+          
+          <image 
+            class="svg-object" 
+            xlink:href="https://s3.amazonaws.com/ocu/assets/img/humans-text-2.png" 
+            x="0" y="0" width="650" height="183" 
+            filter="url(#filter1191)" />
+        </svg>
+      </div>
+
+      <div id="main-content">
+        <p id="p_01">
+          Hey, ##firstname##!<br/>
+          <br/>
+          Oklahoma Christian University has a special vibe. We Live Jesus Loud every day. We call OC home—and we want you to call OC home, too. Come for a campus visit! Click on the icons below to tell us which of these amazing things at OC and Oklahoma City interests you?
+        </p>
+    
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <table>
+              <tbody>
+                <tr>
+                  <td class="icons" data-resp="location">
+                    <div class="icon">
+                      <img src="https://s3.amazonaws.com/ocu/assets/img/okWhite.svg" alt="location">
+                    </div>
+                    <div class="icon icon-clicked">
+                      <img src="https://s3.amazonaws.com/ocu/assets/img/okRed.svg" alt="location">
+                    </div>
+                  </td>
+                  <td valign="center" class="desc">
+                    <p>I'm excited to be close to Oklahoma City so I can live a "big" life.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <table>
+              <tbody>
+                <tr>
+                  <td class="icons" data-resp="team">
+                    <div class="icon">
+                      <img src="https://s3.amazonaws.com/ocu/assets/img/eagleWhite.svg" alt="location">
+                    </div>
+                    <div class="icon icon-clicked">
+                      <img src="https://s3.amazonaws.com/ocu/assets/img/eagleRed.svg" alt="location">
+                    </div>
+                  </td>
+                  <td class="desc">
+                    <p>I want to be part of an athletic team and roll with Ike, the mascot.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 item">
+            <table>
+              <tbody>
+                <tr>
+                  <td class="icons" data-resp="spiritual">
+                    <div class="icon">
+                      <img src="https://s3.amazonaws.com/ocu/assets/img/bibleWhite.svg" alt="location">
+                    </div>
+                    <div class="icon icon-clicked">
+                      <img src="https://s3.amazonaws.com/ocu/assets/img/bibleRed.svg" alt="location">
+                    </div>
+                  </td>
+                  <td class="desc">
+                    <p>It's great you have a spiritual life component. It's part of who I am.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-xs-12 col-sm-6 item">
+            <table>
+              <tbody>
+                <tr>
+                  <td class="icons" data-resp="internship">
+                    <div class="icon">
+                      <img src="https://s3.amazonaws.com/ocu/assets/img/cityWhite.svg" alt="location">
+                    </div>
+                    <div class="icon icon-clicked">
+                      <img src="https://s3.amazonaws.com/ocu/assets/img/cityRed.svg" alt="location">
+                    </div>
+                  </td>
+                  <td class="desc">
+                    <p>I'm considering an internship at some point. You guys have a city booming with opportunity.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 item">
+            <table>
+              <tbody>
+                <tr>
+                  <td class="icons" data-resp="academics">
+                    <div class="icon">
+                      <img src="https://s3.amazonaws.com/ocu/assets/img/testTubeWhite.svg" alt="location">
+                    </div>
+                    <div class="icon icon-clicked">
+                      <img src="https://s3.amazonaws.com/ocu/assets/img/testTubeRed.svg" alt="location">
+                    </div>
+                  </td>
+                  <td class="desc">
+                    <p>I want to be challenged academically. Love that you are among the best in the west!</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-xs-12 col-sm-6 item">
+            <table>
+              <tbody>
+                <tr>
+                  <td class="icons" data-resp="community">
+                    <div class="icon">
+                      <img src="https://s3.amazonaws.com/ocu/assets/img/houseWhite.svg" alt="location">
+                    </div>
+                    <div class="icon icon-clicked">
+                      <img src="https://s3.amazonaws.com/ocu/assets/img/houseRed.svg" alt="location">
+                    </div>
+                  </td>
+                  <td class="desc">
+                    <p>OC is home means something to me. It's important that I matter during the next four years of college.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>        
+        </div>
+      </div>
+
+      <div id="actions">
+        <div id="ready" data-action="I'm Ready">
+          <p>I'm Ready&mdash;What's Next?</p>
+        </div>
+        <div id="visit" data-action="I'd Like to Visit">
+          <p>I'd Like To Visit</p>
+        </div>
+      </div>
+
+      <form method="post" id="form">
+        <div style="display:none;">
+          <input type="text" name="form_resp" value="">
+          <input type="text" name="submitaction" value="">
+        </div>
+      </form>
+      
+      <div id="footer" class="row">
+        <div class="col-xs-12 col-sm-6" id="footer-logo">
+          <img src="https://s3.amazonaws.com/ocu/assets/img/ocu-logo.svg" alt="ocu-logo">
+        </div>
+        <div class="col-xs-12 col-sm-6 address-info">
+          <div>www.oc.edu<br/>800-877-5010</div>
+          <div>2501 E. Memorial Road<br/>Oklahoma City, OK</div>
+        </div>
+      </div>
+        
+    </div> <!-- End Bootstrap Container -->
+
+    <script src="https://s3.amazonaws.com/ocu/node_modules/jquery/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        var resp = [];
+
+        $('td').click(function(el) {
+          var i = $(el.currentTarget).data('resp');
+          var index = resp.indexOf(i);
+          if(index == -1) {
+            resp.push(i);
+            $(el.currentTarget).children('.icon-clicked').css('display', 'inline');
+          }
+          else {
+            resp.splice(index, 1);
+            $(el.currentTarget).children('.icon-clicked').css('display', 'none');
+          }
+          
+          $('input[name=form_resp]').val(resp);
+        }.bind(resp));
+
+        $('#actions div').click(function() {
+          $('input[name=submitaction]').val($(this).data('action'));
+          document.querySelector('#form').submit();
+        });
+      });
+
+      window.addEventListener('load', function() {
+        var blur = 8.0;
+        var filter = document.querySelector('#feGaussianBlur1189');
+        document.querySelector('.container-fluid').style.display = "block";
+        document.querySelector('#svg-object').style.opacity = 1;
+        
+        (function focus() {
+          if(blur > 0) {
+            filter.setAttribute('stdDeviation', blur);
+            blur = blur - 0.08;
+            requestAnimationFrame(focus);
+          }
+        })();
+
+        $('p').css('font-size', innerWidth * 0.009 + 'pt');
+      });
+    </script>
+  </body>
+</html>
