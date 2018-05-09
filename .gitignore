@@ -43,3 +43,5 @@ Private/
 PRIVATE/
 node_modules/
 .vs/
+.vscode/
+
