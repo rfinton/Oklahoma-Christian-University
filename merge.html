@@ -11,18 +11,18 @@
     <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <!--<link rel="stylesheet" href="assets/css/style.css">-->
     <style>
       body {
         background-image: url('https://s3.amazonaws.com/ocu/assets/img/gradient-wallpaper-1.jpg');
-        background-size: cover;}
+        background-size: 100% 100%;}
       .container-fluid {max-width: 1024px; display: none; background-color: #ffffff;}
-      #svg-object {width: 650px; height: 183px; opacity: 0;}
+      #svg-object {
+        opacity: 0;}
       .header {
         background-image: url('https://s3.amazonaws.com/ocu/assets/img/humans.jpeg');
         background-repeat: none;
         background-size: cover;
-        padding: 120px 0;
+        padding: 180px 0 60px;
         text-align: center;}
       #main-content {padding: 0 15px;}
       #p_01 {
@@ -71,12 +71,24 @@
         text-align: left;
         padding: 0 20px;}
       .address-info div:first-of-type {border-right: solid 2px #ffffff;}
+
+      @media screen and (max-width: 420px) {
+        .header {padding: 100px 0 30px;}
+        p {font-size: 12pt !important;}
+        #actions {width: 90%;}
+        #footer {display: block;}
+        #footer-logo img {width: 100%;}
+      }
     </style>
   </head>
   <body>
     <div class="container-fluid">
       <div class="header row">
-        <svg id="svg-object" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink">
+        <svg 
+          id="svg-object" 
+          version="1.1" 
+          xmlns="http://www.w3.org/2000/svg" 
+          xmlns:xlink= "http://www.w3.org/1999/xlink">
           <filter
             style="color-interpolation-filters:sRGB"
             inkscape:label="Blur"
@@ -90,7 +102,7 @@
           <image 
             class="svg-object" 
             xlink:href="https://s3.amazonaws.com/ocu/assets/img/humans-text-2.png" 
-            x="0" y="0" width="650" height="183" 
+            x="0" y="0" 
             filter="url(#filter1191)" />
         </svg>
       </div>
@@ -281,20 +293,28 @@
       });
 
       window.addEventListener('load', function() {
+        document.querySelector('.container-fluid').style.display = "block";
+
+        $('#svg-object, #svg-object image').attr({
+          width: $('.header').outerWidth() * 0.7 + 'px',
+          height: $('.header').outerWidth() * 0.7 / 3.55 + 'px'
+        });
+
+        $('p').css('font-size', innerWidth * 0.009 + 'pt');
+        
         var blur = 8.0;
         var filter = document.querySelector('#feGaussianBlur1189');
-        document.querySelector('.container-fluid').style.display = "block";
-        document.querySelector('#svg-object').style.opacity = 1;
-        
-        (function focus() {
+        var focus = function() {
+          document.querySelector('#svg-object').style.opacity = 1;
+
           if(blur > 0) {
             filter.setAttribute('stdDeviation', blur);
             blur = blur - 0.08;
             requestAnimationFrame(focus);
           }
-        })();
+        }.bind(this, blur, filter);
 
-        $('p').css('font-size', innerWidth * 0.009 + 'pt');
+        setTimeout(focus, 1000);
       });
     </script>
   </body>

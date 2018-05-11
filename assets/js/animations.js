@@ -6,7 +6,7 @@ try {
     $('#hoc').velocity({ opacity: [1,0] });
     autoAdjust();
     window.onload = function() {
-      // window.requestAnimationFrame(showText);
+      //window.requestAnimationFrame(showText);
     };
   } else {
     autoAdjust();
