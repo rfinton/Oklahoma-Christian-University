@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <title>OCU - WeRHome</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <style>
+      @font-face {
+        font-family: MyriadPro;
+        src: url('https://s3.amazonaws.com/ocu/assets/fonts/MyriadPro-Regular.otf');
+      }
+      body {
+        background-image: url('https://s3.amazonaws.com/ocu/assets/img/gradient-wallpaper-1.jpg');
+        background-size: 100% 100%;}
+      * {font-family: 'MyriadPro', sans-serif;}
+      .container-fluid {max-width: 1024px; display: none; background-color: #ffffff;}
+      a {color: inherit;}
+      .header {
+        height: 500px;
+        background-image: url('https://s3.amazonaws.com/ocu/assets/img/stem-pg2.jpg');
+        background-repeat: none;
+        background-size: cover;
+        background-position: center;
+        padding: 180px 50px 60px;
+        text-align: center;}
+      #main-content {padding: 0 15px;}
+
+      #interests {
+        width: 50%;
+        margin: 30px auto;
+        padding: 15px 0;
+        background-color: #5EC1B3;}
+      
+      #links {
+        width: 70%;
+        margin: 30px auto;}
+      #links > div div {
+        padding: 15px;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #000000;
+        border: solid 6px #ffffff;
+        background-color: #5EC1B3;}
+      #links > div div:hover {
+        cursor: pointer;}
+      
+      #footer {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0;
+        text-align: center;
+        color: #ffffff;
+        background-color: #393738;}
+      .address-info {
+        display: flex;
+        flex: 1;
+        justify-content: center;}
+      .address-info div {
+        text-align: left;
+        padding: 0 20px;}
+      .address-info div:first-of-type {border-right: solid 2px #ffffff;}
+
+      @media screen and (max-width: 420px) {
+        .header {
+          height: 250px;
+          background-position: center;
+          padding: 60px 15px;}
+        p {font-size: 12pt !important;}
+        #footer {display: block;}
+        #footer-logo img {width: 100%;}
+        #links {width: 100%;}
+        ul {width: 100%;}
+      }
+    </style>
+    <script>var resp = "##form_resp##";</script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="header row"></div>
+
+      <div id="main-content">
+        <p id="p_01"><br>Thanks for sharing your interests, ##firstname##!</p>
+        <p id="interests"></p>
+        <p>
+          Create your own way and have an amazing OC STEM experience.<br>
+          <br>
+          Come visit us, ##firstname## &mdash; Oklahoma Christian University and Oklahoma City are home&mdash;and we want you to be part of the family. &nbsp;Schedule your visit ASAP using the link below. &nbsp;Or maybe you're ready to apply. &nbsp;Hit that application button and let's make it happen.<br>
+          <br>
+        </p>
+        <p>
+          <img src="https://s3.amazonaws.com/ocu/assets/img/JancySig.jpg"><br>
+          Jancy Scott<br>
+          Director of Admission
+        </p>
+
+        <div id="links">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              Visit Campus
+              <a href="http://www.oc.edu/admissions/undergraduate/visit/?purl=##purl##" target="_blank"></a>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              Application
+              <a href="https://oc.elluciancrmrecruit.com/admissions/pages/welcome.aspx" target="_blank"></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              About OC
+              <a href="http://www.oc.edu/about/?purl=##purl##" target="_blank"></a>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              Financial Aid
+              <a href="http://www.oc.edu/services/financial/financial-aid/?purl=##purl##" target="_blank"></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              Majors
+              <a href="http://www.oc.edu/academics/?purl=##purl##" target="_blank"></a>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              Life Beyond Campus
+              <a href="http://www.oc.edu/student-life/?purl=##purl##" target="_blank"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="footer" class="row">
+        <div class="col-xs-12 col-sm-6" id="footer-logo">
+          <img src="https://s3.amazonaws.com/ocu/assets/img/ocu-logo.svg" alt="ocu-logo">
+        </div>
+        <div class="col-xs-12 col-sm-6 address-info">
+          <div>www.oc.edu<br/>800-877-5010</div>
+          <div>2501 E. Memorial Road<br/>Oklahoma City, OK</div>
+        </div>
+      </div>
+        
+    </div> <!-- End Bootstrap Container -->
+
+    <script src="https://s3.amazonaws.com/ocu/node_modules/jquery/jquery.min.js"></script>
+    <script src="https://s3.amazonaws.com/ocu/node_modules/velocity/velocity.min.js"></script>
+    <script src="https://s3.amazonaws.com/ocu/node_modules/velocity/velocity.ui.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        if(resp != "") {
+          var ul = document.createElement('ul');
+          resp = resp.split(",");
+
+          for(var a in resp) {
+            var li = document.createElement('li');
+            li.innerHTML = resp[a];
+            ul.appendChild(li);
+          }
+
+          $('#interests').append(ul);
+        }
+
+        document.querySelector('.container-fluid').style.opacity = 0;
+        $('.container-fluid').velocity('transition.slideUpIn');
+        var fontFactor = innerWidth * 0.009;
+
+        if(fontFactor < 14) {
+          $('p').css('font-size', '14pt');  
+        }
+        else {
+          $('p').css('font-size', fontFactor + 'pt');
+        }
+
+        $('#links > div div').click(function() {
+          this.children[0].click();
+        });
+      });
+    </script>
+  </body>
+</html>
