@@ -20,7 +20,7 @@
         background-image: url('https://s3.amazonaws.com/ocu/assets/img/gradient-wallpaper-1.jpg');
         background-size: 100% 100%;}
       * {font-family: 'MyriadPro', sans-serif;}
-      .container-fluid {max-width: 1024px; display: none; background-color: #ffffff;}
+      .container-fluid {max-width: 1024px; opacity: 0; background-color: #ffffff;}
       .svg-object {
         opacity: 0;}
       .svg-object.mobile {
@@ -125,7 +125,18 @@
       });
 
       window.addEventListener('load', function() {
+        $('.svg-object').eq(0).attr({
+          width: $('.header').outerWidth()-30,
+          height: ($('.header').outerWidth()-30)/2.497
+        });
+
+        $('.svg-object').eq(1).attr({
+          width: $('.header').outerWidth()-100,
+          height: ($('.header').outerWidth()-100)/3.388
+        });
+
         $('.container-fluid').velocity('fadeIn', 750);
+        
         var fontFactor = innerWidth * 0.009;
 
         if(fontFactor < 14) {
@@ -166,7 +177,9 @@
     <div class="container-fluid">
       <div class="header row">
 
-        <svg viewbox="0 0 796 308"
+        <svg viewbox="0 0 796 308" 
+          width="0" 
+          height="0" 
           class="svg-object mobile" 
           version="1.1" 
           xmlns="http://www.w3.org/2000/svg" 
@@ -186,7 +199,9 @@
             filter="url(#filter1191)" />
         </svg>
 
-        <svg viewbox="0 0 1694 500"
+        <svg viewbox="0 0 1694 500" 
+          width="0" 
+          height="0" 
           class="svg-object" 
           version="1.1" 
           xmlns="http://www.w3.org/2000/svg" 
